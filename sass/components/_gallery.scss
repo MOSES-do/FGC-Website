@@ -1,0 +1,54 @@
+.gallery {
+  padding-top: 3rem;
+  height: 100vh;
+}
+
+.swiper-wrapper {
+  &-slide {
+    width: 90%;
+    height: 100vh;
+
+    figure {
+      width: 90%;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.gallery__item {
+  display: flex;
+  justify-content: center;
+  padding: 7rem;
+
+  img {
+    width: 70%;
+    background-blend-mode: soft-light;
+
+    @media only screen and (max-width: 1001px) {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 1001px) {
+  }
+}
+
+.directional {
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1;
+  border: white solid 4px;
+}
+
+.swiper-pagination-bullet-active {
+  background: $black-color;
+}

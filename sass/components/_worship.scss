@@ -1,0 +1,123 @@
+.worship {
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+
+    color: $color-grey-dark;
+
+    &:hover &-card:not(:hover):nth-child(3) {
+      transform: translateX(-2rem);
+
+      @media only screen and (max-width: 50em) {
+        transform: translateX(0rem);
+      }
+    }
+
+    &:hover &-card:not(:hover):nth-child(1) {
+      transform: translateX(2rem);
+
+      @media only screen and (max-width: 50em) {
+        transform: translateX(0rem);
+      }
+    }
+
+    @media only screen and (max-width: 50em) {
+      grid-template-columns: 1fr;
+      padding: 0 10rem 0 10rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 4rem 0 4rem;
+    }
+
+    @media only screen and (max-width: 22.5em) {
+      padding: 0 2rem 0 2rem;
+    }
+  }
+
+  .worship--card--1 {
+    align-self: start;
+  }
+
+  .worship--card--2 {
+    padding: 4rem 4rem;
+
+    h2 {
+      color: $color-white;
+    }
+  }
+
+  .worship--card--3 {
+    align-self: start;
+  }
+}
+
+.worship-container-card {
+  box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 0.8rem;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  color: $color-grey-dark;
+  align-content: flex-start;
+
+  transition: all 0.3s;
+
+  & span {
+    font-size: 4rem;
+    width: 4rem;
+
+    stroke: $color-grey-dark;
+  }
+
+  &-text {
+    line-height: $line-height-p-default;
+    margin-top: 2rem;
+  }
+
+  & p {
+    font-size: 1.5rem;
+  }
+
+  & .sub-title {
+    position: relative;
+    margin-top: 3rem;
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid #ce0f3d;
+      margin-bottom: 2rem;
+      width: 5rem;
+      margin-top: 1rem;
+
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &-note {
+    font-size: 1.8rem;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-large;
+  }
+
+  //   &:hover:nth-child(1) {
+  //     transform: translateY(-0.3rem);
+  //   }
+
+  &:hover:nth-child(2) {
+    transform: scale(1.15) translateY(-0.3rem);
+    z-index: 4;
+
+    @media only screen and (max-width: 50em) {
+      transform: scale(1) translateY(0rem);
+    }
+  }
+
+  //   &:hover:nth-child(3) {
+  //     transform: translateY(-0.3rem);
+  //   }
+}

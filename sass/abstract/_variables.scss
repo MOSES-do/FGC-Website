@@ -1,0 +1,53 @@
+$color-primary: #e67e22;
+$color-secondary-dark: #ff7730;
+
+$color-primary-dark: #1e2130;
+
+//Tints
+$color-primary-light-1: #fdf2e9;
+$color-primary-light-2: #fae5d3;
+$color-white: #fff;
+$color-black: #000;
+$black-color-light: #11012c;
+
+$black-color: #0c031b;
+$light-color: rgba(#fff, 0.7);
+
+//Shades(Darker versions)
+//Grey
+$color-grey-dark: #333;
+$color-grey-dark-2: #999;
+$color-grey-light-3: #555;
+$color-grey-light-2: #6f6f6f;
+$color-grey-light-1: #767676;
+
+//Border-raidus
+$border-radius-default: 9px;
+$border-radius-default-1: 11px;
+
+$border-bottom-small: 1px solid $color-primary-dark;
+
+//Font-Weight
+$font-weight-default: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+//Line height
+$line-height-default: 1;
+$line-height-small: 1.05;
+$line-height-medium: 1.2;
+$line-height-p-default: 1.6;
+$line-height-large: 1.8;
+
+//Letter spacing
+$letter-spacing-small: 0.5px;
+$letter-spacing-big: 0.75px;
+
+// FONT VARIABLES
+// $font-primary: "Open Sans", sans-serif;
+$font-primary: "Montserrat", sans-serif;
+
+//FONT SIZE SYSTEM (px) 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 type-scale.coms
+
+//SPACING SYSTEM (px) 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128

@@ -1,0 +1,162 @@
+.sermon {
+  filter: brightness(100%) !important;
+
+  &-box {
+    &--bg {
+      background-color: rgba(#2a2a2b, 1);
+    }
+  }
+
+  &-image img {
+    display: block;
+    width: 100%;
+  }
+
+  &-header {
+    display: grid;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-items: center;
+    color: #000;
+    margin-bottom: 6rem;
+
+    font-size: 2rem;
+
+    & h2 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: $font-weight-medium;
+      max-width: 40ch;
+      text-align: center;
+      color: $color-white;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+
+    &:nth-child(even) .wrapper {
+      order: 1;
+    }
+
+    @media only screen and (max-width: 665px) {
+      &:nth-child(even) .sermon-text {
+        order: 2;
+      }
+
+      @media only screen and (max-width: 492px) {
+        &:nth-child(odd) .sermon-text {
+          order: 2;
+        }
+      }
+    }
+
+    &:nth-child(odd) .wrapper {
+      @media only screen and (max-width: 665px) {
+        order: 1;
+      }
+    }
+
+    .sermon-text {
+      h2 {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: Center;
+
+        @media only screen and (max-width: 1238px) {
+          font-size: 2.4rem;
+        }
+
+        @media only screen and (max-width: 1114px) {
+          font-size: 2.2rem;
+        }
+
+        @media only screen and (max-width: 1000px) {
+          font-size: 1.8rem;
+        }
+
+        @media only screen and (max-width: 320px) {
+          font-size: 1.6rem;
+
+          width: 98%;
+        }
+
+        @media only screen and (max-width: 314px) {
+          width: 95.3%;
+        }
+      }
+    }
+
+    &:nth-child(odd) .sermon-category,
+    .sermon-speaker {
+      @media only screen and (min-width: 610px) {
+        padding: 1rem;
+      }
+
+      @media only screen and (max-width: 930px) {
+        padding-bottom: 2rem;
+      }
+
+      @media only screen and (max-width: 605px) {
+        padding: 2rem;
+      }
+    }
+
+    &:nth-child(even) .sermon-text > *:not(:nth-child(1)) {
+      padding-left: 2rem;
+    }
+
+    p,
+    .category bold {
+      color: #fff;
+      font-weight: $font-weight-default;
+    }
+  }
+
+  &-speaker p {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    color: $color-white;
+    font-weight: $font-weight-medium;
+
+    & bold {
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+
+  &-category {
+    font-size: 1.5rem;
+
+    & p {
+      font-weight: $font-weight-medium !important;
+      margin-top: 1rem;
+      margin-bottom: 0.8rem;
+
+      & bold {
+        color: #e25a52;
+      }
+
+      & span {
+        font-weight: font-weight-medium;
+        color: $color-white;
+      }
+    }
+
+    & .date {
+      color: #e25a52;
+      font-weight: font-weight-medium;
+    }
+
+    & h4 {
+      color: rgb(248, 241, 241);
+      font-weight: 400;
+      line-height: 1.8;
+      margin-top: 2rem;
+    }
+  }
+}
