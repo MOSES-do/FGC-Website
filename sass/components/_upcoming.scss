@@ -4,8 +4,8 @@
   justify-content: space-around;
   align-items: center;
   height: 40vh;
-  color: aliceblue;
-  background: url("https://cutt.ly/kX2TCgw") no-repeat center;
+  color: $color-white;
+  background: #000;
   background-size: cover;
 
   .heading {
@@ -17,6 +17,13 @@
 
     @media only screen and (max-width: 370px) {
       font-size: 2rem;
+    }
+
+    span {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -34,10 +41,8 @@
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  font-family: "Silkscreen", cursive;
 }
 
 .item .count_down {
   font-size: 40px;
-  font-family: "Permanent Marker", cursive;
 }

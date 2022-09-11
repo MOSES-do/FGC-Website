@@ -232,7 +232,7 @@ li {
 .thin-text {
   font-weight: 200 !important; }
 
-.textup {
+.text-up {
   text-transform: uppercase; }
 
 .card-primary {
@@ -519,7 +519,7 @@ li {
     */ }
   @media only screen and (max-width: 37.5em) {
     .nav-menu {
-      background: #0c031b; } }
+      background: #fff; } }
   .nav-menu-main {
     display: flex;
     align-items: center;
@@ -531,9 +531,20 @@ li {
       align-items: center;
       gap: 1rem;
       line-height: 2rem;
-      display: none;
       position: absolute;
       left: 2rem; }
+      .nav-menu-main figure h3 {
+        color: #333;
+        /*
+    em is used becos of useragent font-size adaptability
+    1em = 16px
+    */ }
+        @media only screen and (max-width: 1024px) {
+          .nav-menu-main figure h3 {
+            color: #333; } }
+        @media only screen and (max-width: 37.5em) {
+          .nav-menu-main figure h3 {
+            color: #333; } }
       .nav-menu-main figure img {
         width: 5rem;
         height: 5rem; }
@@ -576,7 +587,7 @@ li {
         top: 1.5rem; } }
     @media only screen and (max-width: 37.5em) {
       .nav-menu .ham button {
-        color: #fff; } }
+        color: #333; } }
   @media only screen and (max-width: 1024px) {
     .nav-menu .ham #close-btn {
       display: none; } }
@@ -590,7 +601,7 @@ li {
     .nav-menu-list {
       display: flex;
       justify-content: center;
-      background-color: #0c031b; } }
+      background: rgba(12, 3, 27, 0.4); } }
   .nav-menu-list > * {
     display: flex;
     gap: 1rem; }
@@ -660,7 +671,9 @@ li {
     */ }
   @media only screen and (min-width: 200px) {
     .nav-menu.window-scroll .nav-menu-main figure {
-      display: flex; } }
+      display: flex; }
+      .nav-menu.window-scroll .nav-menu-main figure h3 {
+        color: #fff; } }
   .nav-menu.window-scroll .list-icon {
     color: #fff;
     font-size: 1rem; }
@@ -802,6 +815,13 @@ li {
       @media only screen and (max-width: 1000px) {
         .sermon-grid .sermon-text h2 {
           font-size: 1.8rem; } }
+      @media only screen and (max-width: 320px) {
+        .sermon-grid .sermon-text h2 {
+          font-size: 1.6rem;
+          width: 98%; } }
+      @media only screen and (max-width: 314px) {
+        .sermon-grid .sermon-text h2 {
+          width: 95.3%; } }
     @media only screen and (min-width: 610px) {
       .sermon-grid:nth-child(odd) .sermon-category,
       .sermon-grid .sermon-speaker {
@@ -951,11 +971,22 @@ li {
   justify-content: space-around;
   align-items: center;
   height: 40vh;
-  color: aliceblue;
-  background: url("https://cutt.ly/kX2TCgw") no-repeat center;
+  color: #fff;
+  background: #000;
   background-size: cover; }
   .container-upcoming .heading {
     font-size: 4rem; }
+    @media only screen and (max-width: 530px) {
+      .container-upcoming .heading {
+        font-size: 2.8rem; } }
+    @media only screen and (max-width: 370px) {
+      .container-upcoming .heading {
+        font-size: 2rem; } }
+    .container-upcoming .heading span {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
 
 .main {
   display: flex;
@@ -968,12 +999,33 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  font-family: "Silkscreen", cursive; }
+  font-size: 16px; }
 
 .item .count_down {
-  font-size: 40px;
-  font-family: "Permanent Marker", cursive; }
+  font-size: 40px; }
+
+.worship h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  align-items: center;
+  color: #000;
+  position: relative;
+  margin: 4rem 0; }
+  .worship h1::after {
+    content: "";
+    position: absolute;
+    top: 4rem;
+    border-bottom: 2px solid #ce0f3d;
+    width: 15rem;
+    display: flex;
+    align-items: flex-start; }
+  @media only screen and (max-width: 540px) {
+    .worship h1 {
+      font-size: 2.4rem; } }
+  @media only screen and (max-width: 380px) {
+    .worship h1 {
+      font-size: 1.8rem; } }
 
 .worship-container {
   display: grid;
@@ -1000,6 +1052,9 @@ li {
       padding: 0 10rem 0 10rem; } }
   @media only screen and (max-width: 37.5em) {
     .worship-container {
+      padding: 0 12rem 0 12rem; } }
+  @media only screen and (max-width: 500px) {
+    .worship-container {
       padding: 0 4rem 0 4rem; } }
   @media only screen and (max-width: 22.5em) {
     .worship-container {
@@ -1010,11 +1065,26 @@ li {
 
 .worship .worship--card--2 {
   padding: 4rem 4rem; }
-  .worship .worship--card--2 h2 {
+  .worship .worship--card--2 h2,
+  .worship .worship--card--2 .sub-title {
     color: #fff; }
+  .worship .worship--card--2 .sub-title {
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 3rem; }
+    .worship .worship--card--2 .sub-title::after {
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid #fff;
+      margin-bottom: 2rem;
+      width: 5rem;
+      margin-top: 1rem;
+      display: flex;
+      align-items: flex-start; }
 
 .worship .worship--card--3 {
-  align-self: start; }
+  align-self: start;
+  padding: 4rem 4rem; }
 
 .worship-container-card {
   box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.8);
@@ -1032,7 +1102,7 @@ li {
     width: 4rem;
     stroke: #333; }
   .worship-container-card-text {
-    line-height: 1.6;
+    line-height: 1.8;
     margin-top: 2rem; }
   .worship-container-card p {
     font-size: 1.5rem; }
@@ -1077,6 +1147,12 @@ li {
   bottom: 0px;
   height: 100%;
   width: 100%; }
+  @media only screen and (max-width: 320px) {
+    .wrapper div video {
+      width: 98%; } }
+  @media only screen and (max-width: 314px) {
+    .wrapper div video {
+      width: 95.3%; } }
 
 footer {
   background: #0c031b;
@@ -1144,7 +1220,8 @@ footer {
 .swiper {
   width: 100%;
   position: relative;
-  height: 95vh; }
+  height: 95vh;
+  margin-top: 3rem; }
   @media only screen and (max-width: 1000px) {
     .swiper {
       height: 65vh; } }
@@ -1218,7 +1295,14 @@ footer {
   background-size: cover;
   background-blend-mode: soft-light;
   filter: brightness(80%);
-  height: 95vh; }
+  height: 95vh;
+  /*
+    em is used becos of useragent font-size adaptability
+    1em = 16px
+    */ }
+  @media only screen and (max-width: 37.5em) {
+    .swiper-slide .hero-1 {
+      margin-top: 3rem; } }
   @media only screen and (max-width: 1000px) {
     .swiper-slide .hero-1 {
       height: 65vh; } }
@@ -1231,7 +1315,14 @@ footer {
   background: url(https://foursquare.org.ng/wp-content/uploads/2022/01/2022-THEME-LANDSCAPE.jpg) no-repeat center;
   background-blend-mode: soft-light;
   background-size: contain;
-  height: 95vh; }
+  height: 95vh;
+  /*
+    em is used becos of useragent font-size adaptability
+    1em = 16px
+    */ }
+  @media only screen and (max-width: 37.5em) {
+    .swiper-slide .hero-2 {
+      background-size: cover; } }
   @media only screen and (max-width: 1000px) {
     .swiper-slide .hero-2 {
       height: 65vh; } }
@@ -1255,7 +1346,14 @@ footer {
 .swiper-slide .hero-4 {
   background: url(../images/domonionhour.jpeg) no-repeat center;
   background-size: contain;
-  height: 95vh; }
+  height: 95vh;
+  /*
+    em is used becos of useragent font-size adaptability
+    1em = 16px
+    */ }
+  @media only screen and (max-width: 37.5em) {
+    .swiper-slide .hero-4 {
+      background-size: cover; } }
   @media only screen and (max-width: 1000px) {
     .swiper-slide .hero-4 {
       height: 65vh; } }
@@ -1348,6 +1446,9 @@ footer {
   color: #132c47; }
   .offering-text {
     font-size: 3.5rem; }
+    @media only screen and (max-width: 471px) {
+      .offering-text {
+        font-size: 2.5rem; } }
 
 .pad {
   padding: 4rem;
@@ -1360,18 +1461,25 @@ footer {
   .pad .block-line {
     margin-top: 4rem;
     width: 50rem; }
-  .pad-text {
+  .pad-text,
+  .pad .note {
     color: #333;
     font-size: 1.5rem;
     line-height: 1.6;
     max-width: 75ch;
     font-weight: 500; }
+  .pad .note {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 2rem;
+    font-weight: 500;
+    max-width: 65ch; }
   .pad .buttons {
     display: flex;
     gap: 1rem;
     font-weight: 600;
     margin-top: 2rem; }
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 374px) {
       .pad .buttons {
         flex-direction: column;
         gap: 1rem;
@@ -1411,7 +1519,7 @@ footer {
       align-self: center; }
       @media only screen and (max-width: 66.5em) {
         .welcome .container .pst-image {
-          width: 90%;
+          width: 100%;
           margin: 8rem auto 0; } }
   .welcome .notes {
     font-size: 1.5rem;
@@ -1451,7 +1559,9 @@ footer {
             margin: 0 auto; } }
         .welcome .notes-main .body span {
           display: flex;
-          margin-bottom: 2.4rem; }
+          margin-bottom: 2.4rem;
+          line-height: 1.8;
+          text-align: justify; }
       @media only screen and (max-width: 66.5em) {
         .welcome .notes-main {
           padding-top: 6rem; } }
@@ -1536,55 +1646,114 @@ footer {
       margin-bottom: 2rem; }
 
 .posts {
-  margin: 10rem 0 7rem 0; }
+  margin: 10rem auto;
+  max-width: 80%; }
+  @media only screen and (max-width: 900px) {
+    .posts {
+      max-width: 95%; } }
+  @media only screen and (max-width: 620px) {
+    .posts {
+      max-width: 99%; } }
+  @media only screen and (max-width: 560px) {
+    .posts {
+      max-width: 80%; } }
+  @media only screen and (max-width: 450px) {
+    .posts {
+      max-width: 95%; } }
   .posts .container {
-    font-weight: 600; }
-  .posts p {
-    font-size: 2rem;
-    color: #1e2130;
+    font-weight: 600;
+    font-size: 3rem;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 600px) {
+      .posts .container {
+        font-size: 2.4rem; } }
+  .posts .subtitle {
+    position: relative;
+    margin-top: 3rem; }
+    .posts .subtitle::after {
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid #ce0f3d;
+      margin-bottom: 2rem;
+      width: 5rem;
+      margin-top: 1rem;
+      display: flex;
+      align-items: flex-start; }
+  .posts p {
+    color: #1e2130;
+    margin-bottom: 0.7rem; }
   .posts-article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6rem;
+    gap: 3rem;
     color: #1e2130; }
+    @media only screen and (max-width: 620px) {
+      .posts-article {
+        gap: 1.3rem; } }
+    @media only screen and (max-width: 620px) {
+      .posts-article {
+        gap: 3rem; } }
     @media only screen and (max-width: 35em) {
       .posts-article {
         grid-template-columns: 1fr; } }
-    .posts-article article div {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
-    .posts-article article .flex {
-      display: flex;
-      justify-content: space-between;
-      font-size: 2rem;
-      font-weight: 300;
-      border-bottom: 1px solid rgba(51, 51, 51, 0.5);
-      margin-bottom: 1.8rem; }
-    .posts-article article h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      margin-top: 2rem;
-      color: #ce0f3d; }
-    .posts-article article .name {
-      font-size: 1.1rem;
-      font-weight: 500; }
-    .posts-article article .text {
-      font-size: 1.4rem;
-      line-height: 1.9;
-      font-weight: 500;
-      margin-top: 3rem; }
-    .posts-article article .next {
-      font-size: 1.4rem;
-      font-weight: 500; }
-    .posts-article article a {
-      position: relative;
-      color: #1e2130; }
-      .posts-article article a span {
-        position: absolute;
-        transform: translateX(0.2rem);
-        transition: all 400ms ease; }
-      .posts-article article a:hover {
-        color: #e67e22; }
-        .posts-article article a:hover span {
-          transform: translateX(0.7rem);
-          color: inherit; }
+    .posts-article article {
+      position: relative; }
+      @media only screen and (max-width: 35em) {
+        .posts-article article {
+          box-shadow: 1px 8px 4px rgba(0, 0, 0, 0.4);
+          border-bottom-left-radius: 1rem;
+          border-bottom-right-radius: 1rem; } }
+      .posts-article article h3,
+      .posts-article article p,
+      .posts-article article a {
+        padding: 1rem; }
+        @media only screen and (max-width: 560px) {
+          .posts-article article h3,
+          .posts-article article p,
+          .posts-article article a {
+            padding: 2rem; } }
+      .posts-article article p,
+      .posts-article article a {
+        font-weight: 200;
+        color: #555;
+        font-family: sans-serif; }
+      .posts-article article h3 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        color: #333; }
+        @media only screen and (max-width: 900px) {
+          .posts-article article h3 {
+            font-size: 1.9rem; } }
+        @media only screen and (max-width: 560px) {
+          .posts-article article h3 {
+            font-size: 2.2rem; } }
+      .posts-article article .text {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        font-weight: 500; }
+        @media only screen and (max-width: 900px) {
+          .posts-article article .text {
+            font-size: 1.6rem; } }
+        @media only screen and (max-width: 560px) {
+          .posts-article article .text {
+            font-size: 1.9rem; } }
+      .posts-article article .next {
+        font-size: 1.2rem;
+        font-weight: 500; }
+        @media only screen and (max-width: 900px) {
+          .posts-article article .next {
+            font-size: 1.5rem; } }
+        @media only screen and (max-width: 560px) {
+          .posts-article article .next {
+            font-size: 1.8rem; } }
+      .posts-article article a {
+        color: #ff7730;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem; }
+        .posts-article article a span {
+          transition: 400ms ease; }
+        .posts-article article a:hover {
+          color: #ff7730; }
+          .posts-article article a:hover span {
+            margin-left: 0.4rem; }
