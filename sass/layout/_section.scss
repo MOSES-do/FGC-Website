@@ -23,8 +23,8 @@
     width: 80%;
     z-index: 15;
 
-    @media only screen and (max-width: 22.5em) {
-      transform: translate(-50%, -40%);
+    @media only screen and (max-width: 500px) {
+      transform: translate(-50%, -25%);
     }
 
     figure {
@@ -36,13 +36,29 @@
       transform: translateY(-80%);
       width: 100%;
 
-      @media only screen and (max-width: 22.5em) {
-        transform: translateY(-60%);
+      @media only screen and (min-width: 901px) {
+        top: -40%;
       }
 
-      @media only screen and (max-width: 19.875em) {
-        transform: translateY(-40%);
+      @media only screen and (min-width: 760px) {
+        transform: translateY(50%);
       }
+
+      @media only screen and (min-width: 683px) {
+        transform: translateY(30%);
+      }
+
+      @media only screen and (max-width: 22.5em) {
+        transform: translateY(-90%);
+      }
+
+      @media only screen and (min-width: 1000px) {
+        transform: translateY(-80%);
+      }
+
+      // @media only screen and (max-width: 19.875em) {
+      //   transform: translateY(-90%);
+      // }
 
       .web-logo {
         width: 6rem;
@@ -81,6 +97,12 @@
 
       & span {
         font-weight: $font-weight-semi-bold;
+      }
+    }
+
+    a {
+      @media only screen and (min-width: 501px) {
+        margin-top: 3rem;
       }
     }
   }
@@ -289,7 +311,7 @@
 
 // Section offering
 .section-giving {
-  padding: 6rem;
+  padding: 4rem;
   margin-top: 12rem;
 
   @media only screen and (max-width: 700px) {
@@ -302,19 +324,27 @@
 }
 
 .offering {
-  color: #132c47;
+  color: #010f1f;
 
   &-text {
     font-size: 3.5rem;
 
-    @media only screen and (max-width: 471px) {
+    @media only screen and (max-width: 557px) {
       font-size: 2.5rem;
+    }
+
+    @media only screen and (max-width: 382px) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 324px) {
+      font-size: 1.8rem;
     }
   }
 }
 
 .pad {
-  padding: 4rem;
+  padding: 2.5rem;
   border-radius: 11px;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.4);
   //
@@ -328,18 +358,30 @@
   background-size: cover;
   background-position: center;
 
+  @media only screen and (max-width: 980px) {
+    background-image: linear-gradient(
+        rgba($color-grey-dark, 0.8),
+        rgba($color-grey-dark, 0.8)
+      ),
+      url(../images/offering/offering-2.png);
+  }
+
   .block-line {
     margin-top: 4rem;
     width: 50rem;
   }
 
-  &-text,
-  .note {
+  &-text {
     color: $color-grey-dark;
     font-size: 1.5rem;
     line-height: $line-height-p-default;
     max-width: 75ch;
     font-weight: 500;
+
+    @media only screen and (max-width: 980px) {
+      color: $color-white;
+      font-weight: 300;
+    }
   }
 
   .note {
@@ -348,6 +390,10 @@
     margin-top: 2rem;
     font-weight: 500;
     max-width: 65ch;
+    @media only screen and (max-width: 980px) {
+      color: $color-white;
+      font-weight: 300;
+    }
   }
 
   & .buttons {
@@ -356,7 +402,7 @@
     font-weight: $font-weight-semi-bold;
     margin-top: 2rem;
 
-    @media only screen and (max-width: 374px) {
+    @media only screen and (max-width: 417px) {
       flex-direction: column;
       gap: 1rem;
       align-items: center;
@@ -390,6 +436,10 @@
   background-color: rgba(#560ae47e, 0.1);
   .container {
     padding: 6rem;
+
+    @media only screen and (max-width: 600px) {
+      padding: 2rem;
+    }
 
     display: grid;
     grid-template-columns: 50% 50%;
@@ -457,6 +507,7 @@
 
       .body {
         margin-top: 6rem;
+        color: $color-grey-light-3;
 
         @media only screen and (max-width: 1064px) {
           span {
@@ -495,6 +546,10 @@
           transform: rotate(180deg) translateX(-25px);
           font-size: 10rem;
         }
+
+        @media only screen and (max-width: 354px) {
+          font-size: 7rem;
+        }
       }
 
       &::after {
@@ -518,6 +573,10 @@
           font-size: 10rem;
         }
 
+        @media only screen and (max-width: 592px) {
+          transform: translateY(-80px);
+        }
+
         @media only screen and(max-width:46em) {
           top: 6rem;
           left: -1rem;
@@ -533,9 +592,14 @@
           left: -1rem;
         }
 
+        @media only screen and (max-width: 354px) {
+          transform: translateY(-70px);
+          font-size: 7rem;
+        }
+
         @media only screen and(max-width:22.125em) {
           top: 8rem;
-          left: -2rem;
+          left: -0.6rem;
         }
       }
 
@@ -659,6 +723,14 @@
         border-bottom-right-radius: 1rem;
       }
 
+      img {
+        @media only screen and (max-width: 35em) {
+          box-shadow: 1px 8px 4px rgba(0, 0, 0, 0.4);
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+        }
+      }
+
       h3,
       p,
       a {
@@ -672,8 +744,7 @@
       p,
       a {
         font-weight: 200;
-        color: $color-grey-light-3;
-        font-family: sans-serif;
+        color: $color-grey-light-1;
       }
 
       h3 {
@@ -692,13 +763,13 @@
 
       .text {
         font-size: 1.3rem;
-        line-height: 1.6;
+        line-height: 1.7;
         font-weight: 500;
         @media only screen and (max-width: 900px) {
           font-size: 1.6rem;
         }
         @media only screen and (max-width: 560px) {
-          font-size: 1.9rem;
+          font-size: 1.49rem;
         }
       }
 
@@ -709,7 +780,7 @@
           font-size: 1.5rem;
         }
         @media only screen and (max-width: 560px) {
-          font-size: 1.8rem;
+          font-size: 1.29rem;
         }
       }
 

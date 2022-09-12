@@ -1,24 +1,16 @@
 .popup {
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  transform: translate(-37%, -50%);
+  position: relative;
   height: 100vh;
   z-index: 100;
   transition: 1s ease-in-out opacity, 200ms ease-in-out transform;
 
-  @media only screen and (max-width: 900px) {
-    top: 53%;
-  }
-
-  @media only screen and (max-width: 780px) {
-    // top: 53%;
-  }
-
   figure {
-    width: 90%;
+    width: 40%;
     padding: 5rem 0 5rem 0;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     display: flex;
     flex-direction: column;
@@ -28,41 +20,98 @@
     z-index: 100;
 
     img {
-      width: 75%;
-
-      @media only screen and (max-width: 780px) {
-        width: 100%;
-      }
+      max-width: 100%;
+      position: relative;
 
       @media only screen and (max-width: 560px) {
-        width: 118%;
+        max-width: 158%;
+        transform: translate(0, -85%);
       }
 
       @media only screen and (max-width: 500px) {
         width: 135%;
+        transform: translate(0, -36%);
+      }
+
+      @media only screen and (max-width: 428px) {
+        width: 135%;
+        transform: translate(0, -56%);
       }
 
       @media only screen and (max-width: 420px) {
         width: 165%;
+        transform: translate(0, -48%);
+      }
+
+      @media only screen and (max-width: 411px) {
+        width: 165%;
+        transform: translate(0, -28%);
+      }
+
+      @media only screen and (max-width: 390px) {
+        width: 195%;
+        transform: translate(0, -50%);
       }
 
       @media only screen and (max-width: 360px) {
-        width: 185%;
+        width: 195%;
+        transform: translate(0, -40%);
+      }
+
+      @media only screen and (min-width: 561px) {
+        max-width: 95%;
+        transform: translate(0, -70%);
+      }
+
+      @media only screen and (min-width: 605px) {
+        width: 135%;
+        transform: translate(0, -15%);
+      }
+      @media only screen and (min-width: 661px) {
+        width: 125%;
+        transform: translate(0, -15%);
+      }
+
+      @media only screen and (min-width: 703px) {
+        width: 115%;
+        transform: translate(0, -15%);
+      }
+
+      @media only screen and (min-width: 753px) {
+        width: 105%;
+        transform: translate(0, -15%);
+      }
+
+      @media only screen and (min-width: 800px) {
+        max-width: 98%;
+        transform: translate(0, -70%);
+      }
+
+      @media only screen and (min-width: 1100px) {
+        max-width: 68%;
+        transform: translate(0, -90%);
+      }
+
+      @media only screen and (min-width: 1280px) {
+        max-width: 68%;
+        transform: translate(0, -30%);
+      }
+
+      @media only screen and (min-width: 1354px) {
+        max-width: 68%;
+        transform: translate(0, -2%);
       }
     }
 
     .txt-close {
-      font-size: 1.5rem;
-      color: #fff;
-      cursor: pointer;
     }
   }
 
   button {
     font-size: 3rem;
     align-self: flex-start;
+    right: 45px;
     position: absolute;
-    right: 0;
     top: 5rem;
     background: transparent;
     color: $color-white;
@@ -71,6 +120,12 @@
 
     &:active {
       transform: scale(0.9);
+    }
+
+    p {
+      font-size: 4rem !important;
+      color: #fff;
+      cursor: pointer;
     }
   }
 }

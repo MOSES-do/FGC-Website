@@ -14,26 +14,28 @@ li {
 
 .heading-primary {
   font-size: 6rem;
-  line-height: 1.05;
+  line-height: 1.4 !important;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
 
-  @media only screen and(max-width:28.375em) {
+  @media only screen and (max-width: 47.4375em) {
+    font-size: 5.4rem;
+    margin-top: -1.5rem;
+  }
+
+  @media only screen and (max-width: 682px) {
     font-size: 4rem;
   }
 
-  @media only screen and(max-width:20.75em) {
+  @media only screen and (max-width: 488px) {
     font-size: 3rem;
   }
 
-  @media only screen and (max-width: 47.4375em) {
-    font-size: 4rem;
-  }
-
-  @media only screen and (max-width: 27.25em) {
+  @media only screen and (max-width: 362px) {
     font-size: 2.5rem;
+    margin-top: -1.2rem;
   }
 }
 
@@ -41,8 +43,20 @@ li {
   font-size: 2.5rem;
   line-height: 1.01;
 
-  @media only screen and (max-width: 27.625em) {
+  @media only screen and (max-width: 540px) {
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 432px) {
+    font-size: 1.8rem;
+  }
+
+  @media only screen and (max-width: 403px) {
     font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 351px) {
+    font-size: 1.3rem;
   }
 }
 
@@ -55,7 +69,6 @@ li {
 .heading-tertiary {
   font-weight: 700;
   color: #333;
-  /* color: #45260a; */
   letter-spacing: -0.5px;
 }
 
