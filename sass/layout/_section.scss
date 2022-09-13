@@ -157,12 +157,12 @@
     background-size: contain;
     height: 95vh;
 
-    @include respond(phone) {
-      background-size: cover;
-    }
-
     @media only screen and(max-width:1000px) {
       height: 65vh;
+    }
+
+    @include respond(phone) {
+      background-size: cover;
     }
 
     @media only screen and(max-width:500px) {
@@ -804,4 +804,15 @@
       }
     }
   }
+}
+
+.map {
+  padding-left: 8rem;
+  padding-right: 4rem;
+
+  @media only screen and (max-width: 1000px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  margin-top: 6rem;
 }

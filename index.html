@@ -27,6 +27,7 @@
     <script defer src="js/flip-clock.js"></script>
     <script defer src="js/pageloadpopup.js"></script>
     <script defer src="js/popad.js"></script>
+    <script defer src="js/tabbed.js"></script>
 
 
 
@@ -74,8 +75,8 @@
                     <p class="navigation-icons-address">No. 25 Abule-Oko Road, Magboro II, Ogun State, Nigeria</p>
                 </div>
                 <div class="navigation-icons--2">
-                    <ion-icon class="social-icon-locale" name="call"></ion-icon>
-                    <!-- <div class="navigation-icons-phone"> 0701-1564-754</div> -->
+                    <!-- <ion-icon class="social-icon-locale" name="call"></ion-icon> -->
+                    <div class="navigation-icons-phone"> </div>
 
                 </div>
             </div>
@@ -117,10 +118,12 @@
                     <li class="nav-menu-list"><a class="nav-item" href="#media">Media
                             <ion-icon name="caret-down-outline" class="list-icon"></ion-icon>
                         </a>
-                        <ul class="sub-list">
+                        <!-- <ul class="sub-list">
                             <li class="gallery"><a target="_blank" href="gallery.html">Gallery</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
+                    <li class="nav-menu-list"><a class="nav-item" href="gallery.html">Gallery</a></li>
+
                     <li class="nav-menu-list"><a class="nav-item" href="#projects">Projects</a></li>
 
                     <li class="nav-menu-list"><a class="nav-item" href="#news">Programmes</a></li>
@@ -302,7 +305,7 @@
 
     </section>
 
-    <section id="" class="worship">
+    <section id="" class="worship subtitle">
         <h1>WHY YOU SHOULD WORSHIP WITH US</h1>
         <div class="container worship-container">
             <div class="worship-container-card worship--card--1 card-secondary">
@@ -622,170 +625,81 @@
         </div>
     </section>
 
+    <section class="section section-tab" id="news">
+        <div class="section__title">
+            <h2 class="section__description subtitle">Our Programmes</h2>
+            <h3 class="section__header">
+                Just so you never have to miss a service.
+            </h3>
+        </div>
 
-    <section id="news" class="news__board">
-        <div class="news__board-box">
-            <div class="news__board-card">
-                <div class="news__board-card--1 card-new">
-                    <h3 class="card-subtitle margin-bottom-md">
-                        Hear My Cry Oh Lord!
-                    </h3>
+        <div class="operations">
+            <div class="operations__tab-container">
+                <button class="btn-tab operations__tab operations__tab--1 operations__tab--active" data-tab="1">
+                    <span>01</span>HEAR MY CRY
+                </button>
+                <button class="btn-tab operations__tab operations__tab--2" data-tab="2">
+                    <span>02</span>STUDYING THE WORD
+                </button>
+                <button class="btn-tab operations__tab operations__tab--3" data-tab="3">
+                    <span>03</span>SHALL WE PRAY
+                </button>
+            </div>
+            <div class="operations__content operations__content--1 operations__content--active">
+
+                <div class="operations__header">
                     <figure class="card-image card-image--1">
-                        <img src="images/gallery/photo-1.jpeg" alt="Card image one" class="card__img">
+                        <h1 class="title-text-807">Hear My Cry</h1>
+                        <img src="images/program-4.png" alt="Card image one" class="card__img">
                     </figure>
-                    <p class="news__board-card-text">
+                </div>
+                <div class="main-text">
+                    <h1 class="title-text">Hear My Cry</h1>
+                    <p>
                         The heart cry of a weary soul as described by King David in the psalms, reveals the extent to
                         which men need the intervention and the grace of God to excel on this side of the kingdom. Come
                         and make your desires known to God as we cry with one voice.
                     </p>
 
-                    <p class="news__board-card-text">The Lord is waiting to fill your mouth with laughter.</p>
+                    <p class="foot-note"><b>Join us every 2nd and 3rd Wednesday of every month by
+                            10.00am</b></p>
 
-
-                    <p class="news__board-card-text">
-                        <b>Time</b>: Every 3rd Wednesday of the month by 10.00am.
-                    </p>
-
-
-
-                    <!-- <h4 class="coming-event">coming event</h4>
-                    📢No upcoming event... -->
-                    <!-- <div class=" mini-calendar">
-                        <div class="new-box">
-                            <div class=" circle-box">
-                                <p class="circle-text">Days</p>
-                            </div>
-                            <div class=" circle-box">
-                                <p class="circle-text">Hours</p>
-                            </div>
-                            <div class=" circle-box">
-                                <p class="circle-text">Minutes</p>
-                            </div>
-                            <div class=" circle-box">
-                                <p class="circle-text">Seconds</p>
-                            </div>
-                        </div>
-
-                        <div class="wrapper">
-                            <ul class="flip-clock-container box">
-                                <li class="flip-item-seconds  item">15</li>
-                                <li class="flip-item-minutes item">17</li>
-                                <li class="flip-item-hours item">19</li>
-                                <li class="flip-item-days item">01</li>
-                            </ul>
-                        </div>
-                    </div> -->
-
-
-
-                    <!-- <div class="notification">
-
-                        <div class="notification-icon"><span class="material-symbols-rounded">
-                                share
-                            </span>
-
-                            <span class="material-symbols-rounded">
-                                link
-                            </span>
-
-                            <span class="material-symbols-rounded">
-                                mail
-                            </span>
-                        </div>
-
-                        <a class="btn btn--news_board push-button" href="#">Know more</a>
-
-
-                    </div> -->
                 </div>
 
+            </div>
 
-                <!-------------- Card 2 ----------->
-                <div class="news__board-card--3 card-new">
-                    <h3 class="card-subtitle margin-bottom-md">
-                        Bible Study
-                    </h3>
+            <div class="operations__content operations__content--2">
+                <div class="operations__header">
                     <figure class="card-image card-image--1">
-                        <img src="images/gallery/photo-3.jpeg" alt="Card image one" class="card__img">
+                        <h1 class="title-text-807">Studying The Word</h1>
+                        <img src="images/program-5.png" alt="Card image one" class="card__img">
                     </figure>
-                    <p class="news__board-card-text">
-                        We must approach the Bible as a story - the story of God and of God's people throughout history.
-                        What makes it dynamic
-                        and present today is that the story hasn't ended.
+                </div>
+                <div class="main-text">
+                    <h1 class="title-text">Studying The Word</h1>
+                    <p>
+                        If there is one thing you can count on iwth God, it is that you can never predict when He will
+                        change the course of your life and lead you down a path of blessings you couldn't imagine. thta'
+                        swhy we must approach thebibel as a stry - the story of God and of God's people throughout
+                        history. What makes it dynamic and present today is that the story hasn't ended
                     </p>
 
-                    <h3 class="card-subtitle margin-top-sm">
-                        Sunday Meet Up
-                    </h3>
+                    <p class="foot-note"><b>Join us as we deeepen our knowledge of Christ every Tuesday, 6:30 - 8:00
+                            pm</b></p>
 
-                    <p class="text-two">Do join us as we shed the love of God this Sunday, in our various House
-                        Fellowship Centres.</p>
-
-
-                    <!-- <h4 class="coming-event">Coming event</h4>
-
-                    📢No upcoming event... -->
-
-                    <!-- <div class=" mini-calendar">
-                                    <div class="new-box">
-                                        <div class=" circle-box">
-                                            <p class="circle-text">Days</p>
-                                            </ul>
-                                        </div>
-                                        <div class=" circle-box">
-                                            <p class="circle-text">Hours</p>
-                                        </div>
-                                        <div class=" circle-box">
-                                            <p class="circle-text">Minutes</p>
-                                        </div>
-                                        <div class=" circle-box">
-                                            <p class="circle-text">Seconds</p>
-                                        </div>
-                                    </div>
-            
-                                    <div class="wrapper">
-                                        <ul class="flip-clock-container box">
-                                            <li class="flip-item-seconds  item">15</li>
-                                            <li class="flip-item-minutes item">17</li>
-                                            <li class="flip-item-hours item">19</li>
-                                            <li class="flip-item-days item">01</li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-
-
-
-                    <!-- <div class="notification">
-
-                        <div class="notification-icon"><span class="material-symbols-rounded">
-                                share
-                            </span>
-
-                            <span class="material-symbols-rounded">
-                                link
-                            </span>
-
-                            <span class="material-symbols-rounded">
-                                mail
-                            </span>
-                        </div>
-
-                        <a class="btn btn--news_board push-button" href="#">Know more</a>
-                    </div> -->
                 </div>
 
-                <!---------  Card 3  ----------->
-                <div class="news__board-card--3 card-new">
-                    <h3 class="card-subtitle margin-bottom-md">
-                        Prayer Meeting
-                    </h3>
+            </div>
+            <div class="operations__content operations__content--3">
+                <div class="operations__header">
                     <figure class="card-image card-image--1">
-                        <img src="images/gallery/photo-6.jpeg" alt="Card image one" class="card__img">
+                        <h1 class="title-text-807">Shall We Pray</h1>
+                        <img src="images/program-6.png" alt="Card image one" class="card__img">
                     </figure>
-                    <p class="news__board-card-text">
-                        The love of God is shed abroad in our hearts, that we may worship Him in spirit and in
-                        truth.
-                        <br><br>
+                </div>
+                <div class="main-text">
+                    <h1 class="title-text">Shall We Pray</h1>
+                    <p>
                         Prayer isn’t just about asking God for things you need or desire. It’s about establishing a
                         relationship with Him built
                         on faith and trust in Him. God knows the desires of your heart long before you even think to
@@ -794,39 +708,18 @@
                         him.
                     </p>
 
-                    <!-- <h4 class="coming-event">Coming event</h4>
-                    📢No upcoming event... -->
+                    <p class="foot-note"><b>Join us every Thursday between 6:30-8:00 pm as we collectively seek God's
+                            face</b></p>
 
-
-                    <!-- <div class="notification">
-
-                        <div class="notification-icon"><span class="material-symbols-rounded">
-                                share
-                            </span>
-
-                            <span class="material-symbols-rounded">
-                                link
-                            </span>
-
-                            <span class="material-symbols-rounded">
-                                mail
-                            </span>
-                        </div>
-
-                        <a class="btn btn--news_board push-button" href="#">Know more</a>
-
-
-                    </div> -->
                 </div>
+
             </div>
-        </div>
         </div>
     </section>
 
-
-
     <div class="map">
-        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="container spread"
+        <iframe frameborder="0" height="300" width="100%" scrolling="no" marginheight="0" marginwidth="0"
+            class="container spread"
             src="https://maps.google.com/maps?width=100vw&amp;height=50vh&amp;hl=en&amp;q=55%20Abule-Oko%20Rd,%20121101,%20Magboro,%20Nigeria+(FGC,%20Shepherd's%20House)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             title="Abule-Oko Rd, Magboro II, Lagos Ibadan Expressway, Ogun State Nigeria."
             aria-label="Abule-Oko Rd, Magboro II, Lagos Ibadan Expressway, Ogun State Nigeria."></iframe>
@@ -842,9 +735,9 @@
                 <figure>
                     <img src="images/aflame.jpeg" alt="">
                 </figure>
-                <!-- <p class="txt-close" style="font-size:1.4rem; cursor:pointer; position:absolute; top:2%; ">
+                <p class="txt-close" style="font-size:1.4rem; cursor:pointer; position:absolute; top:2%; ">
                     Click here to
-                    close</p> -->
+                    close</p>
 
 
             </div>
@@ -893,7 +786,7 @@
                 <a href="#about">About Us</a>
                 <a href="#media">Media</a>
                 <a href="#projects">Projects</a>
-                <a href="gallery.html">Gallery</a>
+                <a href="gallery.html" target="_blank">Gallery</a>
                 <a href="#news" class="btn btn--full">News Board</a>
             </article>
 
