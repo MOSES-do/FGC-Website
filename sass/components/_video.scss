@@ -19,11 +19,26 @@
   height: 100%;
   width: 100%;
 
+  @media only screen and (max-width: 360px) {
+    width: 97%;
+  }
+
+  @media only screen and (max-width: 347px) {
+    width: 95%;
+  }
+
+  @media only screen and (max-width: 326px) {
+    width: 86.5%;
+  }
+
   @media only screen and (max-width: 320px) {
-    width: 98%;
+    width: 86.5%;
   }
 
   @media only screen and (max-width: 314px) {
-    width: 95.3%;
+    width: 84.5%;
+  }
+  @media only screen and (max-width: 300px) {
+    width: 79.5%;
   }
 }

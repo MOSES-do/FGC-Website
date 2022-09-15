@@ -55,6 +55,69 @@
   }
 }
 
-.item .count_down {
-  font-size: 40px;
+.item {
+  .count_down {
+    font-size: 40px;
+    z-index: 999;
+  }
+}
+
+.circle {
+  border: 1px solid $color-grey-dark-2;
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: none;
+
+  &:before {
+    content: "";
+    // background-image: conic-gradient(#04b0ee 20deg, transparent 120deg);
+    background: linear-gradient(-45deg, red, green, blue, yellow);
+    height: 250%;
+    width: 250%;
+    position: absolute;
+    left: -25%;
+    top: -25%;
+
+    animation: rotate 2s infinite linear;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  &:after {
+    content: "";
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+    top: 4.9%;
+    left: 5.2%;
+    display: grid;
+    // color: #04b0ee;
+    place-items: center;
+    z-index: 1;
+  }
+}
+
+.circle-1 {
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

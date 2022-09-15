@@ -1,0 +1,35 @@
+.messenger {
+  font-size: 5rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translate(-2rem, -5rem);
+  z-index: 999;
+  color: $color-white;
+  background-color: rgb(10, 124, 255);
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+
+  &:active {
+    scale: (0.98);
+  }
+
+  @media only screen and (max-width: 1200px) {
+    max-width: 55px;
+    max-height: 47px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    max-width: 55px;
+    max-height: 42px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    max-width: 55px;
+    max-height: 39px;
+    display: none;
+  }
+}

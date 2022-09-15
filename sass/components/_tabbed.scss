@@ -14,10 +14,13 @@
 
 .section-tab {
   padding: 6rem 0;
-  //   border-top: 1px solid #ddd;
+
+  @media only screen and (max-width: 807px) {
+    margin-bottom: -5rem;
+  }
 
   @media only screen and (max-width: 580px) {
-    margin-top: 5rem;
+    margin-bottom: 10rem;
   }
 
   transition: transform 1s, opacity 1s;
@@ -124,6 +127,7 @@
   max-width: 100%;
   margin: 12rem auto 0 auto;
   border-radius: 8px;
+  padding-bottom: 2rem;
 
   @media only screen and (max-width: 807px) {
     display: grid;
@@ -331,11 +335,15 @@
       background-color: var(--color-tertiary-darker);
       font-size: 2rem;
       text-align: center;
-      padding: 0 3rem 0 0;
+      padding: 1.2rem 3rem 1.2rem 0;
       width: 91.5%;
     }
 
-    @media only screen and (max-width: 807px) {
+    @media only screen and (max-width: 687px) {
+      width: 89.7%;
+    }
+
+    @media only screen and (max-width: 580px) {
       width: 95%;
     }
 
