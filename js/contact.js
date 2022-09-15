@@ -67,6 +67,28 @@ messenger.addEventListener("click", () => {
 
 const mediaQuery = window.matchMedia("(maxwidth: 600px)");
 
-if (mediaQuery) {
-  load.classList.add("pop");
+// if (mediaQuery.matches) {
+//   load.classList.add("pop");
+//   closed.style.display = "none";
+// }
+
+// function handleTabletChange(e) {
+//   // Check if the media query is true
+//   if (e.matches) {
+//     // Then log the following message to the console
+//     load.classList.add("pop");
+//     closed.style.display = "none";
+//     console.log("Media Query Matched!");
+//   }
+// }
+
+// // Register event listener
+// mediaQuery.addListener(handleTabletChange);
+
+// // Initial check
+// handleTabletChange(mediaQuery);
+
+if (mediaQuery.matches) {
+  document.querySelector(".contain").classList.add("pop");
+  document.querySelector(".closed").style.display = "none";
 }

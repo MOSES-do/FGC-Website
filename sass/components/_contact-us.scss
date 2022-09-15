@@ -237,8 +237,8 @@ button:focus,
   color: $color-white;
   pointer-events: all;
 
-  @media only screen and (max-width:600px){
-    display:none;
+  @media only screen and (max-width: 600px) {
+    display: none !important;
   }
 }
 

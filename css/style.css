@@ -604,6 +604,9 @@ button:focus,
   right: 2rem;
   color: #fff;
   pointer-events: all; }
+  @media only screen and (max-width: 600px) {
+    #closed {
+      display: none !important; } }
 
 .pop {
   opacity: 1;
@@ -1823,6 +1826,7 @@ footer {
   background-image: url(../images/locate.jpg);
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   background-size: cover;
   white-space: nowrap;
   background-position: 50% 50%;
