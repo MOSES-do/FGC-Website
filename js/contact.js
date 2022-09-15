@@ -69,5 +69,4 @@ const mediaQuery = window.matchMedia("(maxwidth: 600px)");
 
 if (mediaQuery) {
   load.classList.add("pop");
-  closed.style.display = "none";
 }

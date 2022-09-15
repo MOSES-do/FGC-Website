@@ -236,6 +236,10 @@ button:focus,
   right: 2rem;
   color: $color-white;
   pointer-events: all;
+
+  @media only screen and (max-width:600px){
+    display:none;
+  }
 }
 
 //JS Compliant
