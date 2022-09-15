@@ -834,26 +834,25 @@
 
                 <h4>GET IN TOUCH</h4>
                 <h2 class="form-headline">Send us a message</h2>
-                <form id="submit-form" action="POST" data-netlify="true">
+                <form id="submit-form" action="post" data-netlify="true" onSubmit="submit">
                     <p>
-                        <input id="name" class="form-input" type="text" placeholder="Your Name*">
+                        <input id="name" class="form-input" type="text" placeholder="Your Name*" name="name">
                         <small class="name-error"></small>
                     </p>
                     <p>
-                        <input id="email" class="form-input" type="email" placeholder="Your Email*">
+                        <input id="email" class="form-input" type="email" placeholder="Your Email*" name="email">
                         <small class="name-error"></small>
                     </p>
 
                     <p class="full-width">
-                        <textarea minlength="20" id="message" cols="30" rows="4" placeholder="Your Message*"
-                            required></textarea>
+                        <textarea minlength="20" id="message" cols="30" rows="4" placeholder="Your Message*" required
+                            name="textarea"></textarea>
                         <small></small>
                     </p>
 
                     <p class="full-width">
-                        <input type="submit" class="submit-btn" value="Submit">
-                        <!-- <button class="reset-btn" onclick="reset()">Reset</button> 
-                        onclick="checkValidations()"
+                        <input type="submit" class="submit-btn" value="Submit" onclick="checkValidations()">
+                        <!-- <button class="reset-btn" onclick="reset()">Reset</button> "
                         -->
                     </p>
                 </form>
