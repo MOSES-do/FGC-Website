@@ -433,6 +433,7 @@ li {
   z-index: 999;
   opacity: 0;
   pointer-events: none;
+  transform: scale(0);
   transition: 1s ease-in-out opacity, 200ms ease-in-out transform; }
   .contain .subtitle {
     display: none; }
@@ -610,7 +611,15 @@ button:focus,
 
 .pop {
   opacity: 1;
-  pointer-events: all; }
+  pointer-events: all;
+  animation: rightEntry 2s forwards; }
+
+@keyframes rightEntry {
+  0% {
+    transform: scale(0.1);
+    transform-origin: right bottom; }
+  100% {
+    transform: scale(0.85) translateY(-6rem); } }
 
 .gallery {
   padding-top: 3rem;
@@ -1155,7 +1164,7 @@ button:focus,
   cursor: pointer;
   transition: all 200ms ease-in; }
   .messenger:active {
-    scale: 0.98; }
+    scale: 0.9; }
   @media only screen and (max-width: 1200px) {
     .messenger {
       max-width: 55px;

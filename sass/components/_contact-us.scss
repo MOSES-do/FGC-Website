@@ -35,6 +35,7 @@
 
   opacity: 0;
   pointer-events: none;
+  transform: scale(0);
   transition: 1s ease-in-out opacity, 200ms ease-in-out transform;
 
   @media only screen and (max-width: 600px) {
@@ -99,11 +100,6 @@ div.form {
 .required-input {
   color: black;
 }
-// @media (min-width: 600px) {
-//   .contain {
-//     padding: 0;
-//   }
-// }
 
 h3,
 ul {
@@ -135,15 +131,6 @@ textarea {
   padding-bottom: 8rem;
   border-radius: 10px;
 }
-// @media (min-width: 700px) {
-//   .wrapper {
-//     display: grid;
-//     grid-template-columns: 2fr 1fr;
-//   }
-//   .wrapper > * {
-//     padding: 2em 2em;
-//   }
-// }
 
 ul {
   list-style: none;
@@ -246,4 +233,17 @@ button:focus,
 .pop {
   opacity: 1;
   pointer-events: all;
+  // transform: scale(0.85) translateY(-8rem);
+  animation: rightEntry 2s forwards;
+}
+
+@keyframes rightEntry {
+  0% {
+    transform: scale(0.1);
+    transform-origin: right bottom;
+  }
+
+  100% {
+    transform: scale(0.85) translateY(-6rem);
+  }
 }
