@@ -1,35 +1,53 @@
 .messenger {
-  font-size: 5rem;
+  font-size: 45px;
   position: fixed;
   bottom: 0;
   right: 0;
   transform: translate(-2rem, -5rem);
   z-index: 999;
   color: $color-white;
-  background-color: rgb(10, 124, 255);
-  max-width: 50px;
-  max-height: 50px;
-  border-radius: 50%;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   transition: all 200ms ease-in;
 
   &:active {
     scale: (0.9);
   }
 
-  @media only screen and (max-width: 1200px) {
-    max-width: 55px;
-    max-height: 47px;
+  &:before {
+    content: "1";
+    margin-right: -53px;
+    margin-top: -28px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ce0f3d;
+    z-index: 1;
+    font-size: 0.9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  @media only screen and (max-width: 900px) {
-    max-width: 55px;
-    max-height: 42px;
+  &:after {
+    content: "";
+    margin-left: -48px;
+    margin-top: -3.5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(10, 124, 255);
+    z-index: -1;
   }
 
   @media only screen and (max-width: 600px) {
-    max-width: 55px;
-    max-height: 39px;
     display: none;
   }
 }
