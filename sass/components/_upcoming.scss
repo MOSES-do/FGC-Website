@@ -33,6 +33,20 @@
       justify-content: center;
       align-items: center;
     }
+
+    .inline {
+      position: relative;
+      span {
+        position: absolute;
+        right: 0;
+        top: 0.3rem;
+        width: 100%;
+      }
+      .dot {
+        margin-left: 0.3rem;
+        color: $color-white;
+      }
+    }
   }
 }
 

@@ -2,15 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  background-color: $black-color-light;
   height: 10vh;
-  .hide {
-    opacity: 0;
-    @media only screen and (max-width: 672px) {
-      display: none;
-    }
-  }
+  padding-left: 2rem;
+
+  // .hide {
+  //   opacity: 0;
+  //   @media only screen and (max-width: 672px) {
+  //     display: none;
+  //   }
+  // }
 
   .article-logo {
     img {
@@ -18,44 +21,48 @@
       width: 6rem;
     }
     display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
     align-items: center;
-    gap: 2rem;
 
     .alt__logo {
       display: flex;
       flex-direction: column;
-    }
+      gap: 0;
+      margin-top: 1rem;
+      color: $color-white;
 
-    @media only screen and (max-width: 488px) {
-      display: none;
-    }
-  }
-
-  .navbar-theme {
-    font-family: "Shadows Into Light", cursive;
-    border: none;
-    font-size: 5.5rem;
-    font-weight: 800;
-    color: $color-black;
-    text-align: center;
-    margin-left: -10rem;
-
-    @media only screen and (max-width: 672px) {
-      font-size: 3.5rem;
-    }
-
-    @media only screen and (max-width: 488px) {
-      margin-left: 40%;
-    }
-
-    @media only screen and (max-width: 381px) {
-      margin-left: 33%;
-    }
-
-    @media only screen and (max-width: 323px) {
-      margin-left: 30%;
+      .close-gap {
+        margin-top: -0.4rem;
+      }
     }
   }
+
+  // .navbar-theme {
+  //   font-family: "Shadows Into Light", cursive;
+  //   border: none;
+  //   font-size: 5.5rem;
+  //   font-weight: 800;
+  //   color: $color-black;
+  //   text-align: center;
+  //   margin-left: -10rem;
+
+  //   @media only screen and (max-width: 672px) {
+  //     font-size: 3.5rem;
+  //   }
+
+  //   @media only screen and (max-width: 488px) {
+  //     margin-left: 40%;
+  //   }
+
+  //   @media only screen and (max-width: 381px) {
+  //     margin-left: 33%;
+  //   }
+
+  //   @media only screen and (max-width: 323px) {
+  //     margin-left: 30%;
+  //   }
+  // }
 }
 
 .clip {
@@ -75,6 +82,7 @@
     line-height: 1.5;
     width: 70%;
     text-align: center;
+    font-weight: 400;
 
     p {
       font-size: 6rem;
@@ -178,22 +186,6 @@
   margin: 10rem auto;
   max-width: 90%;
 
-  // @media only screen and (max-width: 900px) {
-  //   max-width: 95%;
-  // }
-
-  // @media only screen and (max-width: 620px) {
-  //   max-width: 99%;
-  // }
-
-  // @media only screen and (max-width: 560px) {
-  //   max-width: 80%;
-  // }
-
-  // @media only screen and (max-width: 450px) {
-  //   max-width: 95%;
-  // }
-
   .container {
     font-weight: 600;
     font-size: 3rem;
@@ -211,12 +203,22 @@
 
   &-articles {
     display: grid;
-    grid-template-columns: 50% 35%;
+    grid-template-columns: 50% 40%;
     gap: 15%;
     color: $color-primary-dark;
 
+    @media only screen and (max-width: 900px) {
+      gap: 10%;
+    }
+
     @media only screen and (max-width: 630px) {
       grid-template-columns: 1fr;
+    }
+
+    .articles {
+      @media only screen and (max-width: 630px) {
+        margin-bottom: 15rem;
+      }
     }
 
     article {
@@ -226,10 +228,10 @@
 
       img {
         border-radius: 8px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
 
         @media only screen and (max-width: 630px) {
-          border-bottom-left-radius: 0px;
-          border-bottom-right-radius: 0px;
         }
       }
 
@@ -266,7 +268,7 @@
       h3 {
         font-size: 1.5rem;
         margin-top: 2rem;
-        color: $color-grey-dark;
+        color: #000;
         font-weight: 700;
 
         @media only screen and (max-width: 900px) {
@@ -283,6 +285,13 @@
         line-height: 1.9;
         font-weight: 500;
         color: #333;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        justify-content: center;
+        margin-top: -2rem;
+
         @media only screen and (max-width: 900px) {
           font-size: 1.6rem;
         }
@@ -324,6 +333,10 @@
   }
 
   .aside {
+    background-color: rgba(176, 172, 172, 0.2);
+    padding: 1rem;
+    align-self: flex-start;
+
     h2 {
       border-bottom: 1px solid rgba($color-black, 0.4);
       padding-bottom: 2rem;
@@ -335,6 +348,7 @@
       grid-template-columns: repeat(2, 1fr);
       justify-content: center;
       column-gap: 2rem;
+      margin-bottom: 4rem;
 
       img {
         align-self: start;
@@ -367,6 +381,7 @@
       font-size: 1.4rem;
       line-height: 1.5;
       font-weight: 400;
+      margin-bottom: -0.4rem;
       @media only screen and (max-width: 630px) {
         font-size: 1.6rem;
       }
@@ -389,11 +404,11 @@
       margin-top: -70rem;
     }
   }
-  div {
-    margin-bottom: 4rem;
-  }
+  // div {
+  //   margin-bottom: 4rem;
+  // }
 
-  @media only screen and (max-width: 630px) {
-    width: 95%;
-  }
+  // @media only screen and (max-width: 630px) {
+  //   width: 95%;
+  // }
 }

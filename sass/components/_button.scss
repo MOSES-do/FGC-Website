@@ -89,6 +89,34 @@
     opacity: 1;
   }
 
+  &-payment--2[data-tool-tip] {
+    position: relative;
+
+    &:after {
+      content: attr(data-tool-tip);
+      display: block;
+      position: absolute;
+      background-color: #f2641f;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      bottom: 0;
+      left: -2rem;
+      white-space: nowrap;
+      transform: scale(0);
+      transition: transform ease-out 150ms, bottom ease-out 150ms;
+    }
+
+    &:hover:after {
+      transform: scale(1);
+      bottom: 100%;
+
+      @media only screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+
   &-payment--2:link {
     background-color: #006760;
     color: $color-white;
@@ -119,10 +147,10 @@
 
       transition: all 0.4s ease-out;
     }
-  }
-  &-payment--2:hover::before {
-    transform: scaleY(1);
-    opacity: 1;
+    &:hover::before {
+      transform: scaleY(1);
+      opacity: 1;
+    }
   }
 
   &-payment--3:link {

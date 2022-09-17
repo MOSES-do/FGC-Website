@@ -144,3 +144,18 @@ function init() {
   //Init Typewriter
   new typeWriter(txtElement, words, wait);
 }
+
+
+
+
+document.addEventListener("DOMContentLoaded", initNew);
+
+
+function initNew() {
+  const txtElement = document.querySelector(".txt-typed");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
+
+  //Init Typewriter
+  new typeWriter(txtElement, words, wait);
+}
