@@ -29,7 +29,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 3rem;
-
     color: $color-grey-dark;
 
     &:hover &-card:not(:hover):nth-child(3) {
@@ -37,6 +36,38 @@
 
       @media only screen and (max-width: 50em) {
         transform: translateX(0rem);
+      }
+    }
+
+    &:hover &-card:not(:hover):nth-child(2) {
+      background-color: white !important;
+
+      h2,
+      .sub-title,
+      p,
+      span {
+        color: inherit;
+      }
+      & .sub-title {
+        &::after {
+          border-bottom: 2px solid #ce0f3d;
+        }
+      }
+
+      @media only screen and (max-width: 600px), only screen and (hover: none) {
+        background-color: #ce0f3d !important;
+
+        h2,
+        .sub-title,
+        p,
+        span {
+          color: $color-white;
+        }
+        & .sub-title {
+          &::after {
+            border-bottom: 2px solid $color-white;
+          }
+        }
       }
     }
 
@@ -68,13 +99,57 @@
 
   .worship--card--1 {
     align-self: start;
+    transition: all 400ms ease-out;
+    @media only screen and (max-width: 600px) {
+      transition: none;
+    }
+
+    &:hover {
+      background-color: #ce0f3d !important;
+      color: $color-white;
+
+      .heading-secondary {
+        color: $color-white;
+      }
+
+      .sub-title {
+        &::after {
+          border-bottom: 2px solid $color-white;
+        }
+      }
+      @media only screen and (max-width: 600px), only screen and (hover: none) {
+        background-color: $color-white !important;
+
+        .heading-secondary {
+          color: $color-grey-dark !important;
+        }
+
+        h2,
+        .sub-title,
+        p,
+        span {
+          color: $color-grey-dark;
+        }
+        & .sub-title {
+          &::after {
+            border-bottom: 2px solid #ce0f3d;
+          }
+        }
+      }
+    }
   }
 
   .worship--card--2 {
     padding: 4rem 4rem;
+    transition: background-color 400ms ease-in-out;
+    @media only screen and (max-width: 600px) {
+      transition: none;
+    }
 
     h2,
-    .sub-title {
+    .sub-title,
+    p,
+    span {
       color: $color-white;
     }
     & .sub-title {
@@ -98,11 +173,49 @@
   .worship--card--3 {
     align-self: start;
     padding: 4rem 4rem;
+    transition: all 400ms ease-in-out;
+    @media only screen and (max-width: 600px) {
+      transition: none;
+    }
+
+    &:hover {
+      background-color: #ce0f3d !important;
+      color: $color-white;
+
+      .heading-secondary {
+        color: $color-white;
+      }
+
+      .sub-title {
+        &::after {
+          border-bottom: 2px solid $color-white;
+        }
+      }
+      @media only screen and (max-width: 600px), only screen and (hover: none) {
+        background-color: $color-white !important;
+
+        .heading-secondary {
+          color: $color-grey-dark !important;
+        }
+
+        h2,
+        .sub-title,
+        p,
+        span {
+          color: $color-grey-dark;
+        }
+        & .sub-title {
+          &::after {
+            border-bottom: 2px solid #ce0f3d;
+          }
+        }
+      }
+    }
   }
 }
 
 .worship-container-card {
-  box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.8);
+  box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -152,20 +265,15 @@
     line-height: $line-height-large;
   }
 
-  //   &:hover:nth-child(1) {
-  //     transform: translateY(-0.3rem);
-  //   }
+  &:nth-child(2) {
+    transition: all 600ms ease-in-out;
+    &:hover {
+      transform: scale(1.15) translateY(-0.3rem);
+      z-index: 4;
 
-  &:hover:nth-child(2) {
-    transform: scale(1.15) translateY(-0.3rem);
-    z-index: 4;
-
-    @media only screen and (max-width: 50em) {
-      transform: scale(1) translateY(0rem);
+      @media only screen and (max-width: 50em) {
+        transform: scale(1) translateY(0rem);
+      }
     }
   }
-
-  //   &:hover:nth-child(3) {
-  //     transform: translateY(-0.3rem);
-  //   }
 }
