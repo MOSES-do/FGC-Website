@@ -98,7 +98,7 @@
   }
 
   .worship--card--1 {
-    align-self: start;
+    align-self: stretch;
     transition: all 400ms ease-out;
     @media only screen and (max-width: 600px) {
       transition: none;
@@ -171,9 +171,13 @@
   }
 
   .worship--card--3 {
-    align-self: start;
+    align-self: stretch;
     padding: 4rem 4rem;
     transition: all 400ms ease-in-out;
+
+    span {
+      margin-top: -2rem;
+    }
     @media only screen and (max-width: 600px) {
       transition: none;
     }
