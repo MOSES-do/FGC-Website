@@ -334,6 +334,11 @@
 
   &-text {
     font-size: 3.5rem;
+    color: #010f1f;
+
+    @media only screen and (max-width: 980px) {
+      color: $color-white;
+    }
 
     @media only screen and (max-width: 557px) {
       font-size: 2.5rem;

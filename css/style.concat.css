@@ -1998,16 +1998,17 @@ button:focus,
       .posts-articles article a {
         font-weight: 200;
         color: #767676; }
-      .posts-articles article h3 {
+      .posts-articles article .article-sub--title {
         font-size: 1.5rem;
         margin-top: 2rem;
+        margin-bottom: 1.2rem;
         color: #000;
         font-weight: 700; }
         @media only screen and (max-width: 900px) {
-          .posts-articles article h3 {
+          .posts-articles article .article-sub--title {
             font-size: 1.9rem; } }
         @media only screen and (max-width: 560px) {
-          .posts-articles article h3 {
+          .posts-articles article .article-sub--title {
             font-size: 2.2rem; } }
       .posts-articles article .text {
         font-size: 1.3rem;
@@ -2073,7 +2074,8 @@ button:focus,
         .posts .aside-grid {
           gap: 0.5rem; } }
     .posts .aside-header-sm {
-      font-size: 2rem; }
+      font-size: 1.5rem;
+      margin-bottom: 1rem; }
       @media only screen and (max-width: 1080px) {
         .posts .aside-header-sm {
           margin-top: 2rem; } }
@@ -2516,7 +2518,11 @@ footer {
 .offering {
   color: #010f1f; }
   .offering-text {
-    font-size: 3.5rem; }
+    font-size: 3.5rem;
+    color: #010f1f; }
+    @media only screen and (max-width: 980px) {
+      .offering-text {
+        color: #fff; } }
     @media only screen and (max-width: 557px) {
       .offering-text {
         font-size: 2.5rem; } }
