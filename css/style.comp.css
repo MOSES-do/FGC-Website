@@ -1679,10 +1679,7 @@ button:focus,
 
 .worship .worship--card--1 {
   align-self: stretch;
-  transition: all 400ms ease-out; }
-  @media only screen and (max-width: 600px) {
-    .worship .worship--card--1 {
-      transition: none; } }
+  transition: transform 500ms ease-out, background-color 120ms ease-out, color 150ms ease-out; }
   .worship .worship--card--1:hover {
     background-color: #ce0f3d !important;
     color: #fff; }
@@ -1704,11 +1701,7 @@ button:focus,
           border-bottom: 2px solid #ce0f3d; } }
 
 .worship .worship--card--2 {
-  padding: 4rem 4rem;
-  transition: background-color 400ms ease-in-out; }
-  @media only screen and (max-width: 600px) {
-    .worship .worship--card--2 {
-      transition: none; } }
+  padding: 4rem 4rem; }
   .worship .worship--card--2 h2,
   .worship .worship--card--2 .sub-title,
   .worship .worship--card--2 p,
@@ -1731,12 +1724,9 @@ button:focus,
 .worship .worship--card--3 {
   align-self: stretch;
   padding: 4rem 4rem;
-  transition: all 400ms ease-in-out; }
+  transition: transform 500ms ease-out, background-color 120ms ease-out, color 150ms ease-out; }
   .worship .worship--card--3 span {
     margin-top: -2rem; }
-  @media only screen and (max-width: 600px) {
-    .worship .worship--card--3 {
-      transition: none; } }
   .worship .worship--card--3:hover {
     background-color: #ce0f3d !important;
     color: #fff; }
@@ -1794,7 +1784,7 @@ button:focus,
     font-weight: 500;
     line-height: 1.8; }
   .worship-container-card:nth-child(2) {
-    transition: all 600ms ease-in-out; }
+    transition: transform 500ms ease-out, background-color 100ms ease-out; }
     .worship-container-card:nth-child(2):hover {
       transform: scale(1.15) translateY(-0.3rem);
       z-index: 4; }
@@ -2064,7 +2054,8 @@ button:focus,
       border-bottom: 1px solid rgba(0, 0, 0, 0.4);
       padding-bottom: 2rem;
       margin-bottom: 2rem;
-      font-size: 2rem; }
+      font-size: 2rem;
+      color: #000; }
     .posts .aside-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

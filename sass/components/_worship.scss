@@ -99,11 +99,8 @@
 
   .worship--card--1 {
     align-self: stretch;
-    transition: all 400ms ease-out;
-    @media only screen and (max-width: 600px) {
-      transition: none;
-    }
-
+    transition: transform 500ms ease-out, background-color 120ms ease-out,
+      color 150ms ease-out;
     &:hover {
       background-color: #ce0f3d !important;
       color: $color-white;
@@ -141,10 +138,6 @@
 
   .worship--card--2 {
     padding: 4rem 4rem;
-    transition: background-color 400ms ease-in-out;
-    @media only screen and (max-width: 600px) {
-      transition: none;
-    }
 
     h2,
     .sub-title,
@@ -173,13 +166,10 @@
   .worship--card--3 {
     align-self: stretch;
     padding: 4rem 4rem;
-    transition: all 400ms ease-in-out;
-
+    transition: transform 500ms ease-out, background-color 120ms ease-out,
+      color 150ms ease-out;
     span {
       margin-top: -2rem;
-    }
-    @media only screen and (max-width: 600px) {
-      transition: none;
     }
 
     &:hover {
@@ -270,7 +260,7 @@
   }
 
   &:nth-child(2) {
-    transition: all 600ms ease-in-out;
+    transition: transform 500ms ease-out, background-color 100ms ease-out;
     &:hover {
       transform: scale(1.15) translateY(-0.3rem);
       z-index: 4;
