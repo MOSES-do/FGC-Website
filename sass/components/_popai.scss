@@ -18,23 +18,6 @@
     scale: (0.9);
   }
 
-  &:before {
-    content: "1";
-    margin-right: -53px;
-    margin-top: -28px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: #ce0f3d;
-    z-index: 1;
-    font-size: 0.9rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   &:after {
     content: "";
     margin-left: -48px;
@@ -49,5 +32,24 @@
 
   @media only screen and (max-width: 600px) {
     display: none;
+  }
+}
+
+.beforeFlex {
+  &::before {
+    content: "1";
+    margin-right: -53px;
+    margin-top: -28px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ce0f3d;
+    z-index: 1;
+    font-size: 0.9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

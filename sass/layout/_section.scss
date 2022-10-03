@@ -110,7 +110,7 @@
 
 .directional {
   .swipes {
-    color: rgba(#fff, 0.3);
+    color: rgba(rgba(255, 255, 255, 0.696), 0.3);
     opacity: 0;
     transition: all 400ms ease;
   }
@@ -156,8 +156,7 @@
   }
 
   .hero-2 {
-    background: url(https://foursquare.org.ng/wp-content/uploads/2022/01/2022-THEME-LANDSCAPE.jpg)
-      no-repeat center;
+    background: url(../images/FGCMOTTO.jpg) no-repeat center;
     background-blend-mode: soft-light;
 
     background-size: contain;
@@ -167,13 +166,8 @@
       height: 65vh;
     }
 
-    @include respond(phone) {
-      background-size: cover;
-    }
-
     @media only screen and(max-width:500px) {
       height: 45vh;
-      background-size: fill;
     }
   }
 
@@ -263,6 +257,7 @@
   width: auto;
   height: auto;
   z-index: 999;
+  font-weight: 600;
   opacity: 1;
   transition: opacity 0.1s ease-in, transform 0.1s ease-out;
   animation: fade_close 3s ease-out;

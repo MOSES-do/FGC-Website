@@ -174,11 +174,15 @@
       @media only screen and (max-width: 1024px) {
         display: inline-block;
         position: absolute;
-        right: 5rem;
+        right: 2rem;
         top: 1.5rem;
       }
       @include respond(phone) {
         color: $color-grey-dark;
+      }
+
+      i {
+        font-size: 2.5rem;
       }
     }
 

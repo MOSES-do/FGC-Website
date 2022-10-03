@@ -1,0 +1,82 @@
+.audio_player {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  z-index: 1;
+  padding: 3rem;
+  width: 100%;
+
+  @media only screen and (max-width: 320px) {
+    padding-left: 0.5rem;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    text-transform: capitalize;
+    margin-top: 9rem;
+    gap: 2rem;
+  }
+
+  .message-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 3rem;
+  }
+
+  .message-author {
+    font-size: 1.4rem;
+  }
+}
+
+.audio-box {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  audio {
+    border-radius: 0.5rem;
+    width: 80%;
+  }
+
+  button {
+    font-size: 2rem;
+    margin-left: 1.2rem;
+    background: #fff;
+    border-radius: 50%;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+button[data-tool-tip] {
+  position: relative;
+
+  &:after {
+    content: attr(data-tool-tip);
+    display: block;
+    position: absolute;
+    background-color: #f2641f;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    bottom: 0;
+    left: -2rem;
+    white-space: nowrap;
+    transform: scale(0);
+    transition: transform ease-out 150ms, bottom ease-out 150ms;
+  }
+
+  &:hover:after {
+    transform: scale(1);
+    bottom: 100%;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+}

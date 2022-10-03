@@ -27,24 +27,15 @@
       font-size: 2rem;
     }
 
-    span {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    & > span:nth-child(2) {
+      display: block;
     }
 
     .inline {
-      position: relative;
+      text-align: center;
+
       span {
-        position: absolute;
-        right: 0;
-        top: 0.3rem;
-        width: 100%;
-      }
-      .dot {
-        margin-left: 0.3rem;
-        color: $color-white;
+        margin-left: 0.5rem;
       }
     }
   }

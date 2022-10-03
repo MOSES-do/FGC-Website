@@ -51,9 +51,12 @@ const load = document.querySelector(".contain");
 const closed = document.querySelector("#closed");
 const messenger = document.querySelector(".messenger");
 
+
 window.addEventListener("load", function () {
   this.setTimeout(function open(event) {
     load.classList.add("pop");
+    messenger.classList.remove("beforeFlex");
+
   }, 17000);
 });
 
@@ -63,8 +66,12 @@ closed.addEventListener("click", () => {
 
 messenger.addEventListener("click", () => {
   load.classList.toggle("pop");
+  messenger.classList.remove("beforeFlex");
+
+
 });
 
+// Once we hit 600px this query hides the messenger icon and reveals only the form without the close icon
 const mediaQuery = window.matchMedia("(maxwidth: 600px)");
 
 
@@ -72,5 +79,8 @@ if (mediaQuery.matches) {
   document.querySelector(".contain").classList.add("pop");
   document.querySelector(".closed").style.display = "none";
 }
+
+mesafter.style.display = "none";
+
 
 

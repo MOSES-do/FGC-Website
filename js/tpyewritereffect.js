@@ -135,7 +135,7 @@ class typeWriter {
 
 document.addEventListener("DOMContentLoaded", init);
 
-//Init App
+//Init App Welcome section
 function init() {
   const txtElement = document.querySelector(".txt-type");
   const words = JSON.parse(txtElement.getAttribute("data-words"));
@@ -150,6 +150,8 @@ function init() {
 
 document.addEventListener("DOMContentLoaded", initNew);
 
+
+//Init App Upcoming section
 
 function initNew() {
   const txtElement = document.querySelector(".txt-typed");
