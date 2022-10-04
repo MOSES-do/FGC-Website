@@ -55,7 +55,6 @@ const messenger = document.querySelector(".messenger");
 window.addEventListener("load", function () {
   this.setTimeout(function open(event) {
     load.classList.add("pop");
-    messenger.classList.remove("beforeFlex");
 
   }, 17000);
 });

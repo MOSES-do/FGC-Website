@@ -1,0 +1,104 @@
+.section-giving {
+  padding: 4rem;
+  margin-top: 12rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 2rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 0;
+  }
+}
+
+.offering {
+  color: #010f1f;
+
+  &-text {
+    font-size: 3.5rem;
+    color: #010f1f;
+
+    @media only screen and (max-width: 980px) {
+      color: $color-white;
+    }
+
+    @media only screen and (max-width: 557px) {
+      font-size: 2.5rem;
+    }
+
+    @media only screen and (max-width: 382px) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 324px) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.pad {
+  padding: 2.5rem;
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.4);
+  //
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+
+  background-image: linear-gradient(
+      rgba($color-grey-dark, 0.1),
+      rgba($color-grey-dark, 0.1)
+    ),
+    url(../images/offering/offering-2.png);
+  background-size: cover;
+  background-position: center;
+
+  @media only screen and (max-width: 980px) {
+    background-image: linear-gradient(
+        rgba($color-grey-dark, 0.8),
+        rgba($color-grey-dark, 0.8)
+      ),
+      url(../images/offering/offering-2.png);
+  }
+
+  .block-line {
+    margin-top: 4rem;
+    width: 50rem;
+  }
+
+  &-text {
+    color: $color-grey-dark;
+    font-size: 1.5rem;
+    line-height: $line-height-p-default;
+    max-width: 75ch;
+    font-weight: 500;
+
+    @media only screen and (max-width: 980px) {
+      color: $color-white;
+      font-weight: 300;
+    }
+  }
+
+  .note {
+    font-size: 1.5rem;
+    color: $color-grey-dark;
+    margin-top: 2rem;
+    font-weight: 600;
+    max-width: 65ch;
+    @media only screen and (max-width: 980px) {
+      color: $color-white;
+      font-weight: 300;
+    }
+  }
+
+  & .buttons {
+    display: flex;
+    gap: 1rem;
+    font-weight: $font-weight-semi-bold;
+    margin-top: 2rem;
+
+    @media only screen and (max-width: 417px) {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+}

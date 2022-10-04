@@ -1,5 +1,21 @@
 .sermon {
+  padding: 9.6rem;
+  background-image: linear-gradient(45deg, #2b2e47 0 50%, #e25a52 50% 100%),
+    url(../images/gallery/photo-4.jpeg);
   filter: brightness(100%) !important;
+
+  background-attachment: fixed;
+  background-size: contain;
+  background-blend-mode: soft-light;
+  filter: blur(80px);
+
+  @media only screen and(max-width:600px) {
+    padding: 3.2rem;
+  }
+
+  @media only screen and(max-width:400px) {
+    padding: 1rem;
+  }
 
   &-box {
     &--bg {
@@ -142,8 +158,8 @@
       display: flex;
       align-items: center;
       border-radius: 0.5rem;
-
       position: relative;
+
       color: #fff;
 
       .sermon-image {
@@ -158,32 +174,19 @@
         position: absolute;
         top: 0;
         left: 0;
+        display: flex;
+        flex-shrink: 1;
 
-        @media only screen and (max-width: 360px) {
-          width: 97%;
+        @media only screen and(max-width:320px) {
+          width: 97.5%;
         }
 
-        @media only screen and (max-width: 347px) {
-          width: 95%;
+        @media only screen and(max-width:310px) {
+          width: 94%;
         }
 
-        @media only screen and (max-width: 330px) {
-          width: 89%;
-        }
-
-        @media only screen and (max-width: 326px) {
-          width: 86.5%;
-        }
-
-        @media only screen and (max-width: 320px) {
-          width: 86.5%;
-        }
-
-        @media only screen and (max-width: 314px) {
-          width: 84.5%;
-        }
-        @media only screen and (max-width: 300px) {
-          width: 79.5%;
+        @media only screen and(max-width:300px) {
+          width: 91%;
         }
       }
     }

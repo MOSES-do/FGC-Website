@@ -18,31 +18,18 @@
   bottom: 0px;
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: stretch;
 
-  @media only screen and (max-width: 360px) {
-    width: 97%;
+  @media only screen and(max-width:320px) {
+    width: 97.5%;
   }
 
-  @media only screen and (max-width: 347px) {
-    width: 95%;
+  @media only screen and(max-width:310px) {
+    width: 94%;
   }
 
-  @media only screen and (max-width: 330px) {
-    width: 89%;
-  }
-
-  @media only screen and (max-width: 326px) {
-    width: 86.5%;
-  }
-
-  @media only screen and (max-width: 320px) {
-    width: 86.5%;
-  }
-
-  @media only screen and (max-width: 314px) {
-    width: 84.5%;
-  }
-  @media only screen and (max-width: 300px) {
-    width: 79.5%;
+  @media only screen and(max-width:300px) {
+    width: 91%;
   }
 }

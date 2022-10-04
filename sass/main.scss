@@ -9,20 +9,23 @@
 @import "components/audio";
 @import "components/button";
 @import "components/contact-us";
-@import "components/gallery";
-@import "components/header";
 @import "components/popbox";
-@import "components/sermon";
+@import "components/swiper";
 @import "components/typewriterffect";
-@import "components/newsboard";
 @import "components/popai";
-@import "components/tabbed";
-@import "components/upcoming";
-@import "components/worship";
 @import "components/video";
 
-@import "layout/article";
-@import "layout/footer";
-@import "layout/housefellow";
-@import "layout/map";
-@import "layout/section";
+@import "website_sections/header";
+@import "website_sections/sermon";
+@import "website_sections/giving";
+@import "website_sections/tabbed";
+@import "website_sections/posts";
+@import "website_sections/worship";
+@import "website_sections/upcoming";
+@import "website_sections/housefellow";
+@import "website_sections/map";
+@import "website_sections/welcome";
+@import "website_sections/footer";
+
+@import "website_pages/article";
+@import "website_pages/gallery";

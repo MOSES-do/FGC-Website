@@ -24,6 +24,11 @@
     font-size: 3rem;
     font-weight: 600;
     margin-top: 3rem;
+    hyphens: auto;
+
+    @media only screen and (max-width: 392px) {
+      font-size: 2.2rem;
+    }
   }
 
   .message-author {
@@ -35,21 +40,34 @@
   display: flex;
   align-items: center;
   gap: 0;
+
   audio {
     border-radius: 0.5rem;
-    width: 80%;
+    width: 100%;
+  }
+
+  a:link,
+  a:active,
+  a:visited {
+    color: #fff;
+    outline: none;
   }
 
   button {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-left: 1.2rem;
     background: #fff;
-    border-radius: 50%;
     height: 18px;
+    border-radius: 50%;
 
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    i {
+      -color: #000;
+      outline: none;
+    }
   }
 }
 
@@ -60,10 +78,10 @@ button[data-tool-tip] {
     content: attr(data-tool-tip);
     display: block;
     position: absolute;
-    background-color: #f2641f;
+    background-color: #fff;
     padding: 0.7rem 1rem;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     bottom: 0;
     left: -2rem;
     white-space: nowrap;
