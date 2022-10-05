@@ -149,6 +149,10 @@
     padding: 0 6rem 0 6rem;
   }
 
+  @media only screen and (max-width: 464px) {
+    padding: 0 6rem 0 6rem;
+  }
+
   .operations__tab-container {
     display: flex;
     justify-content: center;

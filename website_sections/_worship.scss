@@ -10,13 +10,14 @@
     color: $color-black;
     position: relative;
     margin: 4rem 0;
+    padding-bottom: 2rem;
 
     &::after {
       content: "";
       position: absolute;
       top: 4rem;
       border-bottom: 2px solid #ce0f3d;
-      width: 15rem;
+      width: 10rem;
 
       display: flex;
       align-items: flex-start;
@@ -35,50 +36,49 @@
     color: $color-grey-dark;
 
     &:hover &-card:not(:hover):nth-child(3) {
-      transform: translateX(-2rem);
-
+      transform: translateX(2rem);
       @media only screen and (max-width: 50em) {
-        transform: translateX(0rem);
+        transform: translateX(0);
       }
     }
 
-    &:hover &-card:not(:hover):nth-child(2) {
-      background-color: white !important;
+    // Transition for child 2 color change if not hovered
+    // &:hover &-card:not(:hover):nth-child(2) {
+    //   background-color: white !important;
 
-      h2,
-      .sub-title,
-      p,
-      span {
-        color: inherit;
-      }
-      & .sub-title {
-        &::after {
-          border-bottom: 2px solid #ce0f3d;
-        }
-      }
+    //   h2,
+    //   .sub-title,
+    //   p,
+    //   span {
+    //     color: inherit;
+    //   }
+    //   & .sub-title {
+    //     &::after {
+    //       border-bottom: 2px solid #ce0f3d;
+    //     }
+    //   }
 
-      @media only screen and (max-width: 600px), only screen and (hover: none) {
-        background-color: #ce0f3d !important;
+    //   @media only screen and (max-width: 600px), only screen and (hover: none) {
+    //     background-color: #ce0f3d !important;
 
-        h2,
-        .sub-title,
-        p,
-        span {
-          color: $color-white;
-        }
-        & .sub-title {
-          &::after {
-            border-bottom: 2px solid $color-white;
-          }
-        }
-      }
-    }
+    //     h2,
+    //     .sub-title,
+    //     p,
+    //     span {
+    //       color: $color-white;
+    //     }
+    //     & .sub-title {
+    //       &::after {
+    //         border-bottom: 2px solid $color-white;
+    //       }
+    //     }
+    //   }
+    // }
 
     &:hover &-card:not(:hover):nth-child(1) {
-      transform: translateX(2rem);
-
+      transform: translateX(-2rem);
       @media only screen and (max-width: 50em) {
-        transform: translateX(0rem);
+        transform: translateX(0);
       }
     }
 
@@ -101,6 +101,7 @@
   }
 
   .worship--card--1 {
+    transform: translateX(2rem);
     align-self: stretch;
     transition: transform 500ms ease-out, background-color 120ms ease-out,
       color 150ms ease-out;
@@ -137,11 +138,18 @@
         }
       }
     }
+    &:hover {
+      transform: translateX(0);
+    }
+    @media only screen and (max-width: 50em) {
+      transform: translateX(0);
+    }
   }
 
   .worship--card--2 {
     padding: 4rem 4rem;
-
+    transform: scale(1.15) translateY(-0.3rem);
+    z-index: 4;
     h2,
     .sub-title,
     p,
@@ -164,10 +172,16 @@
         align-items: flex-start;
       }
     }
+    transition: transform 500ms ease-out, background-color 100ms ease-out;
+    @media only screen and (max-width: 50em) {
+      transform: scale(1) translateY(0rem);
+    }
   }
 
   .worship--card--3 {
     align-self: stretch;
+    transform: translateX(-2rem);
+
     padding: 4rem 4rem;
     transition: transform 500ms ease-out, background-color 120ms ease-out,
       color 150ms ease-out;
@@ -207,6 +221,13 @@
           }
         }
       }
+    }
+    &:hover {
+      transform: translateX(0);
+    }
+
+    @media only screen and (max-width: 50em) {
+      transform: translateX(0rem);
     }
   }
 }
@@ -263,14 +284,5 @@
   }
 
   &:nth-child(2) {
-    transition: transform 500ms ease-out, background-color 100ms ease-out;
-    &:hover {
-      transform: scale(1.15) translateY(-0.3rem);
-      z-index: 4;
-
-      @media only screen and (max-width: 50em) {
-        transform: scale(1) translateY(0rem);
-      }
-    }
   }
 }

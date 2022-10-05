@@ -12,7 +12,7 @@
     }
 
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 45%;
     gap: 10%;
     justify-content: center;
 
@@ -25,8 +25,8 @@
     }
 
     .pst-image {
-      box-shadow: 0.4rem 0 0.5rem rgba(0, 0, 0, 0.3);
-      align-self: center;
+      // box-shadow: 0.4rem 0 0.5rem rgba(0, 0, 0, 0.3);
+      align-self: start;
       @media only screen and(max-width:66.5em) {
         width: 100%;
         margin: 8rem auto 0;
@@ -46,10 +46,6 @@
     }
 
     h2 {
-      position: absolute;
-      right: 0;
-      border-top-left-radius: 50px 150px;
-
       @media only screen and(max-width:66.5em) {
         top: 2%;
       }
@@ -216,4 +212,14 @@
   }
 
   padding-bottom: 2rem;
+}
+
+.intro-sec {
+  line-height: $line-height-medium;
+  background-color: #ce0f3d;
+  color: $color-white;
+
+  position: absolute;
+  right: 0;
+  border-top-left-radius: 50px 150px;
 }
