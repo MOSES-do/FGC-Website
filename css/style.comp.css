@@ -692,7 +692,7 @@ button:focus,
   cursor: pointer;
   position: absolute;
   top: 4.5rem;
-  right: 4rem;
+  right: 5rem;
   color: #fff;
   pointer-events: all; }
   @media only screen and (max-width: 600px) {
@@ -990,7 +990,7 @@ button:focus,
   border: white solid 4px; }
 
 .swiper-pagination-bullet-active {
-  background: #11012c; }
+  background: #200253; }
 
 .swiper-controller {
   top: 38%;
@@ -1042,15 +1042,6 @@ button:focus,
 .play {
   margin-left: 0.8rem; }
 
-/* Cursor */
-.extra-text .txt-type > .txt {
-  border-right: 0.2rem solid #777; }
-
-.inline .txt-typed > .txt {
-  border-right: 0.2rem solid #fff;
-  margin-left: 6rem;
-  position: relative; }
-
 .messenger {
   font-size: 45px;
   position: fixed;
@@ -1095,8 +1086,25 @@ button:focus,
   align-items: center;
   justify-content: center; }
 
+/* Cursor */
+.extra-text .txt-type > .txt {
+  border-right: 0.2rem solid #777; }
+
+.inline .txt-typed > .txt {
+  border-right: 0.2rem solid #fff;
+  margin-left: 6rem;
+  position: relative; }
+
+.intro-sec {
+  line-height: 1.2;
+  background-color: #ce0f3d;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  border-top-left-radius: 50px 150px; }
+
 .navigation {
-  background-color: #11012c;
+  background-color: #200253;
   /*
     em is used becos of useragent font-size adaptability
     1em = 16px
@@ -1135,7 +1143,7 @@ button:focus,
 
 .social-icon {
   font-size: 1.6rem;
-  color: #11012c;
+  color: #200253;
   padding: 2.2rem 1.1rem;
   align-self: stretch;
   border-left: 0.2px solid rgba(5, 4, 4, 0.2);
@@ -1347,7 +1355,8 @@ button:focus,
 
 .sermon {
   padding: 8rem 0;
-  position: relative; }
+  position: relative;
+  margin-bottom: 16rem; }
   .sermon-box--bg {
     position: absolute;
     background-image: url(../images/gallery/photo-4.jpeg);
@@ -1379,19 +1388,24 @@ button:focus,
       @media only screen and (max-width: 657px) {
         .sermon-header .intro-sec {
           font-size: calc(15px + 0.5vw); } }
-      @media only screen and (max-width: 432px) {
-        .sermon-header .intro-sec {
-          font-size: calc(11.3px + 0.5vw);
-          text-align: left;
-          padding-left: 0.4rem;
-          padding-right: 0.4rem; } }
       @media only screen and (max-width: 310px) {
         .sermon-header .intro-sec {
           text-align: center; } }
     .sermon-header span {
       font-weight: 300; }
     .sermon-header .thick {
-      font-weight: 500; }
+      font-weight: 500;
+      padding-right: calc(2rem + 1vw); }
+    @media only screen and (max-width: 450px) {
+      .sermon-header .intro-sec {
+        font-size: 2.8rem;
+        padding-right: 4rem; }
+      .sermon-header .break {
+        display: block;
+        margin-right: -0.8rem; } }
+    @media only screen and (max-width: 330px) {
+      .sermon-header .intro-sec {
+        font-size: 2.4rem; } }
   .sermon-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
@@ -1835,7 +1849,11 @@ button:focus,
         font-size: 2.4rem; } }
   .posts .subtitle {
     position: relative;
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    color: #200253; }
+    @media only screen and (max-width: 780px) {
+      .posts .subtitle {
+        margin-left: -2.9rem; } }
     .posts .subtitle::after {
       content: "";
       position: absolute;
@@ -1930,14 +1948,17 @@ button:focus,
             margin-left: 0.4rem; }
 
 .worship {
-  margin: 2rem 0 4rem 0;
+  margin: 12rem 0 6rem 0;
   padding-bottom: 4.6rem; }
+  @media only screen and (max-width: 780px) {
+    .worship {
+      margin-bottom: 1rem; } }
   .worship h1 {
     display: flex;
     justify-content: center;
     font-size: 3rem;
     align-items: center;
-    color: #000;
+    color: #200253;
     position: relative;
     margin: 4rem 0;
     padding-bottom: 2rem; }
@@ -2093,6 +2114,9 @@ button:focus,
     margin-top: 2rem; }
   .worship-container-card p {
     font-size: 1.5rem; }
+    @media only screen and (max-width: 500px) {
+      .worship-container-card p {
+        font-size: 1.7rem; } }
   .worship-container-card .sub-title {
     position: relative;
     margin-top: 3rem; }
@@ -2345,6 +2369,7 @@ button:focus,
       margin-top: 12rem; } }
 
 .welcome {
+  margin-bottom: 7rem;
   background-color: rgba(86, 10, 228, 0.1);
   padding-bottom: 2rem; }
   @media only screen and (max-width: 66.5em) {
@@ -2395,6 +2420,9 @@ button:focus,
         @media only screen and (max-width: 1064px) {
           .welcome .notes-main .extra-text {
             margin-left: 4.9%; } }
+        @media only screen and (max-width: 500px) {
+          .welcome .notes-main .extra-text {
+            font-size: 1.8rem; } }
         .welcome .notes-main .extra-text .dot {
           margin-left: 0.3rem; }
       .welcome .notes-main .body {
@@ -2404,6 +2432,9 @@ button:focus,
           .welcome .notes-main .body span {
             max-width: 90%;
             margin: 0 auto; } }
+        @media only screen and (max-width: 500px) {
+          .welcome .notes-main .body {
+            font-size: 1.7rem; } }
         .welcome .notes-main .body span {
           display: flex;
           margin-bottom: 2.4rem;
@@ -2499,19 +2530,14 @@ button:focus,
       @media only screen and (max-width: 37.5em) {
         .welcome .notes .main-description .desc {
           font-size: 1.4rem; } }
+      @media only screen and (max-width: 500px) {
+        .welcome .notes .main-description .desc {
+          font-size: 1.7rem; } }
     .welcome .notes .main-description .bt-1 {
-      color: #11012c;
+      color: #200253;
       font-weight: 900; }
     .welcome .notes .main-description .bt-2 {
       margin-bottom: 2rem; }
-
-.intro-sec {
-  line-height: 1.2;
-  background-color: #ce0f3d;
-  color: #fff;
-  position: absolute;
-  right: 0;
-  border-top-left-radius: 50px 150px; }
 
 footer {
   background: #0c031b;
@@ -2582,7 +2608,7 @@ footer {
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  background-color: #11012c;
+  background-color: #200253;
   height: 10vh;
   padding-left: 2rem; }
   .article-nav .article-logo {

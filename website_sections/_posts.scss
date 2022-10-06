@@ -33,6 +33,12 @@
   .subtitle {
     position: relative;
     margin-top: 3rem;
+    color: $black-color-light;
+
+    @media only screen and (max-width: 780px) {
+      margin-left: -2.9rem;
+    }
+
     &::after {
       content: "";
       position: absolute;
