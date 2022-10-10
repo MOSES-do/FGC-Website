@@ -963,7 +963,7 @@ button:focus,
       height: 45vh; } }
 
 .swiper-slide .hero-4 {
-  background: url(../images/domonionhour.jpeg) no-repeat center;
+  background: url(../images/EncounterWithJesusOct.jpeg) no-repeat center;
   background-size: contain;
   height: 95vh;
   /*
@@ -2233,6 +2233,9 @@ button:focus,
   align-items: center;
   justify-content: center; }
 
+.hide {
+  display: none; }
+
 .fellowship {
   padding: 5rem 10rem;
   max-width: 140rem;
@@ -2537,6 +2540,7 @@ button:focus,
       color: #200253;
       font-weight: 900; }
     .welcome .notes .main-description .bt-2 {
+      color: #200253;
       margin-bottom: 2rem; }
 
 footer {
