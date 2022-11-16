@@ -88,7 +88,7 @@ const swiper = new Swiper(".mySwiper", {
 
 //Count down timer
 
-let endDateElm = "16 October 2022 07:30 am";
+let endDateElm = "20 November 2022 07:30 am";
 let countDownItem = Array.from(document.querySelectorAll(".count_down"));
 
 
@@ -108,6 +108,7 @@ function countDown() {
     countDownItem[3].textContent = sec;
   } else {
     clearInterval(stop);
+    //hideupcoming called
     hideUpcomingSection();
   }
 }
