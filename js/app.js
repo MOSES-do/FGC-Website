@@ -71,6 +71,8 @@ const swiper = new Swiper(".mySwiper", {
     enabled: true,
     onlyInViewport: false,
   },
+
+  // effect:"cube",
   // mousewheel: {
   //   // invert: false,
   // },
@@ -88,7 +90,7 @@ const swiper = new Swiper(".mySwiper", {
 
 //Count down timer
 
-let endDateElm = "20 November 2022 07:30 am";
+let endDateElm = "12 December 2022 07:30 am";
 let countDownItem = Array.from(document.querySelectorAll(".count_down"));
 
 
