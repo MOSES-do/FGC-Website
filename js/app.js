@@ -31,8 +31,10 @@ if (document.body.clientWidth < 1200) {
 
 //Respond to keyboard events (Global events)
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    closeNav();
+  if (document.body.clientWidth < 1200 && e.key === "Escape") {
+    navOpen.style.display = "inline-block";
+    navClose.style.display = "none";
+    nav.style.display = "none";
   }
 });
 
@@ -90,7 +92,7 @@ const swiper = new Swiper(".mySwiper", {
 
 //Count down timer
 
-let endDateElm = "12 December 2022 07:30 am";
+let endDateElm = "18 December 2022 07:30 am";
 let countDownItem = Array.from(document.querySelectorAll(".count_down"));
 
 
