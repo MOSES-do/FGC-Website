@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  list-style: none;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10/16px
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 9/16px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 8/16px
+    overflow-x: hidden;
+  }
+
+  @include respond(phone) {
+    font-size: 48.75%; // 6/16px
+    // overflow-x: hidden;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1 rem = 12px, 12/16 = 75%
+  }
+}
+
+body {
+  font-family: $font-primary;
+  line-height: $line-height-medium;
+  font-weight: 400;
+  color: $color-grey-dark-2;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: $black-color;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: $color-white;
+  border-radius: 0.25rem;
+}

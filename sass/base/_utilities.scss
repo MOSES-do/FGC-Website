@@ -1,0 +1,154 @@
+.margin-bottom-md {
+  margin-bottom: 2rem !important;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-x-lg {
+  margin-bottom: 4rem !important ;
+}
+
+.margin-bottom-xx-lg {
+  margin-bottom: 8rem !important;
+}
+
+.margin-top-smx {
+  margin-top: 4rem;
+}
+
+.margin-right-sm {
+  margin-right: 2.2rem;
+}
+
+.margin-left-sm {
+  margin-left: 1rem !important;
+}
+
+.auto-mr {
+  margin-right: auto !important;
+}
+
+.margin-top-md {
+  margin-top: 9rem;
+}
+
+.margin-top-sm {
+  margin-top: 6rem;
+}
+
+.margin-top-sml {
+  margin-top: 3rem;
+}
+
+.margin-top-smlx {
+  margin-top: 1.8rem;
+}
+
+.align-center {
+  text-align: center !important;
+}
+
+.block-line {
+  display: block;
+}
+
+.block-inline {
+  display: inline-block;
+}
+
+.col-bl {
+  color: $color-grey-dark;
+}
+
+.text-sm {
+  font-size: 2.5rem;
+}
+
+.border-bottom-sm {
+  border-bottom: $border-bottom-small;
+}
+
+.bb-none {
+  border-bottom: 0 !important;
+  color: $color-primary-dark !important;
+}
+
+.slim-text {
+  font-weight: 400 !important;
+  font-size: 1.4rem !important;
+}
+
+.thin-text {
+  font-weight: 200 !important;
+}
+
+.text-up {
+  text-transform: uppercase;
+}
+
+.card-primary {
+  background-color: #ce0f3d !important;
+}
+
+.clr-primary-1 {
+  background-color: #e25a52;
+}
+
+.card-secondary {
+  background-color: #fff !important;
+}
+
+.clr-white {
+  color: $color-white;
+}
+
+.line-height {
+  line-height: $line-height-medium;
+}
+
+.padding-sm {
+  padding: 2rem 5rem 2rem 5rem;
+  letter-spacing: 0.1rem;
+
+  @media only screen and(max-width:484px) {
+    padding: 2rem 2rem 2rem 5rem;
+  }
+
+  @media only screen and(max-width:484px) {
+    padding: 2rem 2rem 2rem 3rem;
+  }
+
+  @media only screen and(max-width:448px) {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+
+  @media only screen and(max-width:432px) {
+    padding: 2rem 4rem 2rem 4rem;
+  }
+
+  @media only screen and(max-width:316px) {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+}
+
+/* COOKIE MESSAGE */
+.cookie-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-image: linear-gradient(45deg, red, blue, purple, gold);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.5rem;
+  z-index: 1;
+  opacity: 1;
+  letter-spacing: 0.4rem;
+}
+
+.cookie-message-hide .cookie-message {
+  display: none;
+}

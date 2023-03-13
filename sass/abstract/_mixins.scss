@@ -1,0 +1,79 @@
+@mixin respond($breakpoint) {
+  /*
+    em is used becos of useragent font-size adaptability
+    1em = 16px
+    */
+
+  @if $breakpoint ==big-desktop {
+    //1800px
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    //887px
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==phone {
+    //600px
+    //600px/16px
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin windowScrollBg {
+  background: rgba($black-color, 0.6);
+  position: fixed;
+  top: 0;
+  border-bottom: 0.1rem solid #f8f8f8;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+
+  @media only screen and(min-width:200px) {
+    .nav-menu-main {
+      figure {
+        display: flex;
+
+        h3 {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .list-icon {
+    color: $color-white;
+    font-size: 1rem;
+  }
+
+  a {
+    color: #fff;
+    font-weight: 400 !important;
+  }
+
+  button {
+    color: $color-white;
+  }
+
+  .gallery {
+    background: rgba($black-color, 0.6);
+    a {
+      color: $color-white !important;
+    }
+  }
+
+  @include respond(phone) {
+    transform: translateY(0rem);
+  }
+}

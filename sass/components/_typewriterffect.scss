@@ -1,0 +1,14 @@
+/* Cursor */
+.extra-text {
+  .txt-type > .txt {
+    border-right: 0.2rem solid #777;
+  }
+}
+
+.inline {
+  .txt-typed > .txt {
+    border-right: 0.2rem solid #fff;
+    margin-left: 6rem;
+    position: relative;
+  }
+}

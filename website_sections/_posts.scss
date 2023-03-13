@@ -1,0 +1,169 @@
+.posts {
+  margin: 10rem auto;
+  max-width: 80%;
+
+  @media only screen and (max-width: 900px) {
+    max-width: 95%;
+  }
+
+  @media only screen and (max-width: 620px) {
+    max-width: 99%;
+  }
+
+  @media only screen and (max-width: 560px) {
+    max-width: 80%;
+    padding: 0 4rem 0 4rem;
+  }
+
+  @media only screen and (max-width: 450px) {
+    max-width: 95%;
+    padding: 0;
+  }
+
+  .container {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  .subtitle {
+    position: relative;
+    margin-top: 3rem;
+    color: $black-color-light;
+
+    @media only screen and (max-width: 780px) {
+      margin-left: -2.9rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid #ce0f3d;
+      margin-bottom: 2rem;
+      width: 5rem;
+      margin-top: 1rem;
+
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  p {
+    color: $color-primary-dark;
+    margin-bottom: 0.7rem;
+  }
+
+  &-article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    color: $color-primary-dark;
+
+    @media only screen and (max-width: 730px) {
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 620px) {
+      gap: 3rem;
+    }
+
+    @media only screen and (max-width: 35em) {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+
+    article {
+      position: relative;
+
+      @media only screen and (max-width: 35em) {
+        box-shadow: 1px 8px 4px rgba(0, 0, 0, 0.4);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+
+      img {
+        @media only screen and (max-width: 35em) {
+          box-shadow: 1px 8px 4px rgba(0, 0, 0, 0.4);
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+        }
+      }
+
+      h3,
+      p,
+      a {
+        padding: 1rem;
+
+        @media only screen and (max-width: 560px) {
+          padding: 2rem;
+        }
+      }
+
+      p,
+      a {
+        font-weight: 200;
+        color: $color-grey-light-1;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        color: $color-grey-dark;
+
+        @media only screen and (max-width: 900px) {
+          font-size: 1.9rem;
+        }
+
+        @media only screen and (max-width: 560px) {
+          font-size: 2.2rem;
+        }
+      }
+
+      .text {
+        font-size: 1.3rem;
+        line-height: 1.7;
+        font-weight: 500;
+        @media only screen and (max-width: 900px) {
+          font-size: 1.6rem;
+        }
+        @media only screen and (max-width: 560px) {
+          font-size: 1.49rem;
+        }
+      }
+
+      .next {
+        font-size: 1.2rem;
+        font-weight: 500;
+        @media only screen and (max-width: 900px) {
+          font-size: 1.5rem;
+        }
+        @media only screen and (max-width: 560px) {
+          font-size: 1.29rem;
+        }
+      }
+
+      a {
+        color: $color-secondary-dark;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        span {
+          transition: 400ms ease;
+        }
+
+        &:hover {
+          color: $color-secondary-dark;
+
+          span {
+            margin-left: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+}

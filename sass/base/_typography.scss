@@ -1,0 +1,80 @@
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.heading-primary {
+  font-size: 6rem;
+  line-height: 1.4 !important;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  @media only screen and (max-width: 47.4375em) {
+    font-size: 5.4rem;
+    margin-top: -1.5rem;
+  }
+
+  @media only screen and (max-width: 682px) {
+    font-size: 4rem;
+  }
+
+  @media only screen and (max-width: 488px) {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: 362px) {
+    font-size: 2.5rem;
+    margin-top: -1.2rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 2.5rem;
+  line-height: 1.01;
+
+  @media only screen and (max-width: 540px) {
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 432px) {
+    font-size: 1.8rem;
+  }
+
+  @media only screen and (max-width: 403px) {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 351px) {
+    font-size: 1.3rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2.2rem;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: $color-primary;
+  font-weight: $font-weight-semi-bold;
+}
