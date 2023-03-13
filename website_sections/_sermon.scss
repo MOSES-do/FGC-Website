@@ -3,6 +3,11 @@
   position: relative;
   margin-bottom: 16rem;
 
+  &-box {
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+
   &-box--bg {
     position: absolute;
     background-image: url(../images/gallery/photo-4.jpeg);
@@ -88,6 +93,10 @@
     align-items: center;
     padding: 0 8rem;
 
+    @media only screen and (max-width: 1928px) {
+      margin: 0 auto;
+    }
+
     @media only screen and (max-width: 987px) {
       padding: 0 2rem;
     }
@@ -141,8 +150,7 @@
     }
 
     &:nth-child(odd) .wrapper {
-      @media only screen and (max-width: 665px) {
-      }
+      @media only screen and (max-width: 665px) {}
     }
 
     .sermon-text {
@@ -169,6 +177,16 @@
         left: 0;
         display: flex;
         border-radius: 0.5rem;
+
+        @media only screen and (min-width:1600px) {
+          position: absolute;
+          inset: 0 0 0 -5rem;
+        }
+
+        @media only screen and (min-width:1892px) {
+          position: absolute;
+          inset: 0 0 0 -7rem;
+        }
       }
     }
   }
@@ -176,4 +194,14 @@
 
 .message-title {
   hyphens: auto;
+}
+
+.audio-box {
+  @media only screen and (min-width:1600px) {
+    max-width: 60rem;
+  }
+
+  @media only screen and (min-width:1800px) {
+    max-width: 49rem;
+  }
 }
