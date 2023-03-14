@@ -939,7 +939,7 @@ button:focus,
       background-size: fill; } }
 
 .swiper-slide .hero-2 {
-  background: url(../images/FGCMOTTO.jpg) no-repeat center;
+  background: url(../images/fgc2023.jpg) no-repeat center;
   background-blend-mode: soft-light;
   background-size: contain;
   height: 95vh; }
@@ -1357,6 +1357,9 @@ button:focus,
   padding: 8rem 0;
   position: relative;
   margin-bottom: 16rem; }
+  .sermon-box {
+    max-width: 2000px;
+    margin: 0 auto; }
   .sermon-box--bg {
     position: absolute;
     background-image: url(../images/gallery/photo-4.jpeg);
@@ -1412,6 +1415,9 @@ button:focus,
     column-gap: 6rem;
     align-items: center;
     padding: 0 8rem; }
+    @media only screen and (max-width: 1928px) {
+      .sermon-grid {
+        margin: 0 auto; } }
     @media only screen and (max-width: 987px) {
       .sermon-grid {
         padding: 0 2rem; } }
@@ -1471,9 +1477,25 @@ button:focus,
         left: 0;
         display: flex;
         border-radius: 0.5rem; }
+        @media only screen and (min-width: 1600px) {
+          .sermon-grid .sermon-text .sermon-image {
+            position: absolute;
+            inset: 0 0 0 -5rem; } }
+        @media only screen and (min-width: 1892px) {
+          .sermon-grid .sermon-text .sermon-image {
+            position: absolute;
+            inset: 0 0 0 -7rem; } }
 
 .message-title {
   hyphens: auto; }
+
+@media only screen and (min-width: 1600px) {
+  .audio-box {
+    max-width: 60rem; } }
+
+@media only screen and (min-width: 1800px) {
+  .audio-box {
+    max-width: 49rem; } }
 
 .section-giving {
   padding: 4rem;
