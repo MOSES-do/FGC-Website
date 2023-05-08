@@ -5,7 +5,7 @@ const message = document.createElement("div");
 message.classList.add("cookie-message");
 
 message.innerHTML =
-  "<marquee><b>APRIL - THEME: MAKING YOUR LIFE COUNT </b></marquee><button class='btn--close--cookie'><span class='material-symbols-rounded'>close</span></button>";
+  "<marquee><b>MAY - THEME: A FAITHFUL AND DEPENDABLE FAMILY </b></marquee><button class='btn--close--cookie'><span class='material-symbols-rounded'>close</span></button>";
 
 header3.prepend(message);
 // header3.append(message); //overrides the prepend
