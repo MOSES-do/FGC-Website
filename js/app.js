@@ -92,7 +92,7 @@ const swiper = new Swiper(".mySwiper", {
 
 //Count down timer
 
-let endDateElm = "23 July 2023 07:30 am";
+let endDateElm = "6 August 2023 07:30 am";
 let countDownItem = Array.from(document.querySelectorAll(".count_down"));
 
 
